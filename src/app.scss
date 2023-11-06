@@ -1,0 +1,28 @@
+// tailwind integrations
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+body {
+    background-image: url(https://www.kamaboko.com/fishprotein/wp-content/themes/labo/img/bg/backgound.png);
+    background-size: 128px 256px;
+    height:100vh
+    // padding: $xl;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 35%, rgb(255,255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: -2;
+    scroll-behavior: smooth;
+    @include mobile {
+        background: none !important;
+    }
+}

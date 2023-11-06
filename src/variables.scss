@@ -1,0 +1,13 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 450px) {
+        @content;
+        
+    }
+}
