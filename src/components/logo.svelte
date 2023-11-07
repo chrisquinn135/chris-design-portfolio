@@ -1,5 +1,8 @@
 <script>
+  export let inverse;
+
 	let isHovered = false;
+
 
 	function handleMouseOver() {
 		isHovered = true;
@@ -11,11 +14,13 @@
 </script>
 
 <!-- svelte-ignore a11y-img-redundant-alt -->
-<img
+<a href='/'>
+  <img
 	id="menu"
-	src={isHovered ? '/chris-logo-onhover.png' : '/chris-logo.png'}
+	src={!inverse ? (isHovered ? '/chris-logo-onhover.png' : '/chris-logo.png' ) : (isHovered ? '/inverse-hover.png' : '/inverse.png')}
 	on:mouseover={handleMouseOver}
 	on:mouseout={handleMouseOut}
-	alt="Image Swap"
+	alt="swap"
 	class="h-full cursor-pointer"
 />
+</a>
