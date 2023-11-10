@@ -3,7 +3,6 @@
 
 	let isHovered = false;
 
-
 	function handleMouseOver() {
 		isHovered = true;
 	}
@@ -14,7 +13,7 @@
 </script>
 
 <!-- svelte-ignore a11y-img-redundant-alt -->
-<a href='/'>
+
   <img
 	id="menu"
 	src={!inverse ? (isHovered ? '/chris-logo-onhover.png' : '/chris-logo.png' ) : (isHovered ? '/inverse-hover.png' : '/inverse.png')}
@@ -23,4 +22,3 @@
 	alt="swap"
 	class="h-full cursor-pointer"
 />
-</a>

@@ -4,23 +4,14 @@
     export let slug;
     export let t1;
     export let t2;
+	export let onClick;
+	export let url;
 
 	const textWhite = 'text-text-inverse';
 	const textBlack = 'text-text-primary';
-	function swapImage() {
-		var image = document.getElementById('menu');
-
-		if (isImage1) {
-			image.src = '/menu-icon-hover.png'; // Swap to image2 on hover
-		} else {
-			image.src = '/menu-icon.png'; // Swap back to image1 on unhover
-		}
-
-		isImage1 = !isImage1; // Toggle the state
-	}
 </script>
 
-<a href="/assetmanager" class="container flex flex-col gap-4">
+<a on:click={()=> onClick(url)} class="cursor-pointer container flex flex-col gap-4">
 	<div class="test">
 		<div class="box" />
 		<img

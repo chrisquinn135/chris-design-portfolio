@@ -1,61 +1,73 @@
 <script>
+	import { onMount } from 'svelte';
 	import Card from '../components/card.svelte';
-	import Logo from '../components/logo.svelte';
-	import Menu from '../components/menu.svelte';
+	import {loading} from '../store'
+	import { goto } from "$app/navigation";
 
+	function handle() {
+		$loading = true;
+		setTimeout(()=> {
+			$loading=false
+			goto('/assetmanager')
+		},1000)
+	}
+	onMount(()=> {
+		console.log('home loaded');
+	});
+
+	// scrolls down under the fold
 	function handleClick() {
 		document.getElementById('fold').scrollIntoView({
 			behavior: 'smooth'
 		});
 	}
 
-	let isActive = false;
-	function handleNav() {
-		isActive = !isActive;
+	// animation for entering the page
+	let isActive = true;
+	function handleActive() {
+		isActive = true;
+		setTimeout(() => {
+			isActive = false;
+		}, 2000);
+		return '';
+	}
+
+	// animation for leaving the page
+	let isEndActive = false;
+	function handlePageTransition(url) {
+		isEndActive = true;
+		setTimeout(() => {
+			window.location.href = url;
+		}, 500);
 	}
 </script>
 
-<div class="h-11 top-0 left-0 fixed ml-6 md:ml-8 lg:ml-16 mt-6 md:mt-8 z-50">
-	<Logo inverse={isActive} />
-</div>
+<!-- animation for leaving the page -->
+<!-- <div
+	class={isEndActive
+		? 'active px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'
+		: 'inactive px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'}
+/> -->
 
-<div role='button' tabIndex=0 on:keypress={handleNav} class="h-11 top-0 right-0 fixed mr-6 md:mr-8 lg:mr-16 mt-6 md:mt-8 z-50" on:click={handleNav}>
-	<Menu inverse={isActive} />
-</div>
-
-<nav
+<!-- animation for entering the page -->
+<!-- <div
 	class={isActive
-		? 'navi2 px-16 py-8 fade-in bg-surface-inverse z-10 fixed h-screen w-screen'
-		: 'navi px-16 py-8 fade-in bg-surface-inverse z-10 fixed h-screen w-screen'}
+		? 'active px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'
+		: 'inactive px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'}
 >
-	<div class="flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full">
-		<a
-			href="/assetmanager"
-			class="hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			>Asset Manager</a
-		>
-		<a
-			href="/tds"
-			class="hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			>Trulioo Design Linter</a
-		>
-		<a
-			href="/accessibility"
-			class="hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			>Accessibility in the Design System</a
-		>
-	</div>
-    <p class='bottom-0 py-16 fixed text-text-inverse-default'>Designed and developed by Christopher Su</p>
-</nav>
-<div class="px-6 md:px-8 lg:px-16 grid3">
+	<video src="/asset/logo.mp4" type="video/mp4" class="h-16" autoplay muted />
+</div> -->
+
+<!-- body -->
+<div class="px-6 md:px-8 lg:px-16 grid3" onload={handleActive()}>
 	<div class="">
 		<section class="pt-6 pb-6 md:pt-8 md:pb-16 sticky top-0 flex flex-col justify-end h-screen">
-			<div class="flex flex-col gap-y-8 content-end">
+			<div class="flex flex-col gap-y-8 content-end  pr-8">
 				<div class="bg-text-default w-1/4 h-0.5" />
 				<div class="text-base md:text-lg text-text-subdued">
-					Hi, I'm Christopher, a product designer with a software engineering background <br /><br
+					Hi, I'm Christopher, a product designer with a software engineering background. <br /><br
 					/>
-					Passionate about designing and building
+					I'm passionate about designing and building
 					<span class="font-bold text-text-default">accessible</span>
 					and <span class="font-bold text-text-default">intuitive</span> experiences.<br /><br />
 					Currently designing at
@@ -82,13 +94,15 @@
 			<div class="bg-text-default w-full h-0.5" />
 			<h1 class="text-xl font-bold">SELECTED WORK</h1>
 		</div>
-		<div class="flex flex-col gap-y-16">
+		<div class="flex flex-col gap-y-16" data-sveltekit-preload-data="hover">
 			<Card
 				title={'Asset Manager'}
 				desc={'Centralizing Assets for Improved Consistency Across the Platform'}
 				slug="/asset-card.png"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
+				url={'/assetmanager'}
+				onClick={handlePageTransition}
 			/>
 			<div id="fold">
 				<Card
@@ -97,6 +111,8 @@
 					slug="/design-lint-card.png"
 					t1={'Product Design'}
 					t2={'Design Tooling'}
+					url={'/design-lint'}
+					onClick={handlePageTransition}
 				/>
 			</div>
 			<Card
@@ -105,6 +121,8 @@
 				slug="/accessibility-card.png"
 				t1={'Design System'}
 				t2={'Accessibility'}
+				url={'/accessibility'}
+				onClick={handlePageTransition}
 			/>
 		</div>
 	</section>
@@ -127,22 +145,17 @@
 </div>
 
 <style>
-	.navi2 {
+	/* .active {
 		top: 0;
 		opacity: 1;
 		transition: top 0.3s ease-out, opacity 0.3s ease-in-out;
+		z-index: 100;
 	}
 
-	.navi {
+	.inactive {
 		top: -100%;
-		opacity: 0;
 		transition: top 0.3s ease-out, opacity 0.3s ease-in-out;
-	}
-	/* 
-    .fade-in {
-        transition: opacity 0.3s ease-in-out;
-    } */
-
+	} */
 	.grid3 {
 		display: grid;
 		grid-template-columns: 2fr 6fr; /* 1/4, 5/8, 1/8 proportions */
