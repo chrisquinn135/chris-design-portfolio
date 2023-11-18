@@ -24,7 +24,9 @@
 		};
 	}
 </script>
-
+<svelte:head>
+    <title>Christopher Su</title> 
+</svelte:head>
 <!-- body -->
 <div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid3">
 	<section

@@ -15,7 +15,9 @@
 	let container = 'flex flex-col gap-4 sm:gap-8'
 	
 </script>
-
+<svelte:head>
+    <title>Christopher Su — Asset Manager</title> 
+</svelte:head>
 <!-- Body content -->
 
 <div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid3">

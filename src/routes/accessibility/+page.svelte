@@ -16,7 +16,9 @@
 
 
 </script>
-
+<svelte:head>
+    <title>Christopher Su — Accessibility in the Design System</title> 
+</svelte:head>
 <!-- Body content -->
 <div class="px-6 pb-24 sm:pb-0 sm:px-8 lg:px-16 grid3">
 	<div class="hidden sm:block">
