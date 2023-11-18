@@ -134,7 +134,7 @@
 						src="/asset/swap-multiple-node.mp4"
 						type="video/mp4"
 						class="w-full"
-						autoplay
+						autoplay playsinline
 						muted
 						loop
 					/>
@@ -149,7 +149,7 @@
 						src="/asset/asset-organization.mp4"
 						type="video/mp4"
 						class="w-full"
-						autoplay
+						autoplay playsinline
 						muted
 						loop
 					/>
@@ -493,7 +493,7 @@
 							src="/asset/filter-sort.mp4"
 							type="video/mp4"
 							class="w-full"
-							autoplay
+							autoplay playsinline
 							muted
 							loop
 						/>
@@ -530,7 +530,7 @@
 							src="/asset/swap-ill-text.mp4"
 							type="video/mp4"
 							class="w-full"
-							autoplay
+							autoplay playsinline
 							muted
 							loop
 						/>
@@ -547,7 +547,7 @@
 							src="/asset/swap-multiple-node.mp4"
 							type="video/mp4"
 							class="w-full"
-							autoplay
+							autoplay playsinline
 							muted
 							loop
 						/>

@@ -121,7 +121,7 @@
 			</div>
 			<div class="flex flex-col gap-2 items-end">
 				<div class={video}>
-					<video src="/tds/tds-lint.mp4" type="video/mp4" class="w-full" autoplay muted loop />
+					<video src="/tds/tds-lint.mp4" type="video/mp4" class="w-full" autoplay playsinline muted loop />
 				</div>
 				<div class="">
 					<span class={numfoot}>0.1 </span><span class={footer}>TDS lint</span>
@@ -418,7 +418,7 @@
 				</div>
 				<div class="flex flex-col gap-2 items-end">
 					<div class={video}>
-						<video src="/tds/tds-lint.mp4" type="video/mp4" class="w-full" autoplay muted loop />
+						<video src="/tds/tds-lint.mp4" type="video/mp4" class="w-full" autoplay playsinline muted loop />
 					</div>
 					<div class="">
 						<span class={numfoot}>6.1 </span><span class={footer}>Linting functionality</span>
