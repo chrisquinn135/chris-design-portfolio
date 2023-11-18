@@ -9,6 +9,16 @@ body {
     background-size: 128px 256px;
     height:100vh;
     // padding: $xl;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+html, body {
+    scroll-behavior: smooth;
 }
 
 body::before {

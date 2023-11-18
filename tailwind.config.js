@@ -13,10 +13,10 @@ export default {
             'action-primary-hover': '#000000',
             'border-default': '#808080',
             'border-subdued': '#D2D2D2',
-            'border-decorative-blue': '#17AED0',
-            'border-decorative-green': '#316E68',
+            'border-blue': '#17AED0',
+            'border-green': '#2B8528',
             'icon-blue': '#0E687D',
-            'icon-green': '#004C45',
+            'icon-green': '#2B8528',
             'icon-red': '#bb363c',
             'icon-yellow': '#a4580e',
             'surface-+1': '#F2F2F2',
@@ -29,8 +29,7 @@ export default {
             'text-inverse-default': '#FFFFFF',
             'text-inverse-subdued': '#E5E5E5',
             'text-placeholder': '#666666',
-            'text-subdued': '#4D4D4D',
-            
+            'text-subdued': '#666666',
           },        
         extend: {}
     },

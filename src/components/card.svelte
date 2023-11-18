@@ -4,14 +4,29 @@
     export let slug;
     export let t1;
     export let t2;
-	export let onClick;
 	export let url;
+
+	import {loading, destination} from '../store'
+	import { goto } from '$app/navigation';
+
+	// text styles
+	let h2 = 'text-2xl sm:text-3xl font-bold text-container'
+	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 
 	const textWhite = 'text-text-inverse';
 	const textBlack = 'text-text-primary';
+
+	function handle(url) {
+		$destination = url;
+		$loading = true;
+		setTimeout(() => {
+			$loading = false;
+			goto(url);
+		}, 1000);
+	}
 </script>
 
-<a on:click={()=> onClick(url)} class="cursor-pointer container flex flex-col gap-4">
+<button on:click={()=> handle(url)} class="cursor-pointer container flex flex-col gap-4">
 	<div class="test">
 		<div class="box" />
 		<img
@@ -21,17 +36,17 @@
 			class="aspect-{2.025 / 1} w-full imagecont"
 		/>
 	</div>
-	<div class="flex flex-col gap-2 items-start">
-		<p class="text-3xl font-bold text-container">{title}</p>
-		<p class="text-text-subdued text-base md:text-lg">
+	<div class="flex flex-col gap-2 items-start text-left">
+		<h3 class={h2}>{title}</h3>
+		<p class="text-text-subdued text-base md:text-lg font-light">
 			{desc}
 		</p>
 		<div class="flex flex-row gap-x-4">
-			<div class="rounded bg-surface-+2 text-xs font-bold px-3 py-1">{t1}</div>
-			<div class="rounded bg-surface-+2 text-xs font-bold px-3 py-1">{t2}</div>
+			<div class="rounded-full text-xs font-bold px-3 py-1 border border-text-default">{t1}</div>
+			<div class="rounded-full text-xs font-bold px-3 py-1 border border-text-default">{t2}</div>
 		</div>
 	</div>
-</a>
+</button>
 
 <style>
 	.text-container {
@@ -66,7 +81,7 @@
 	}
 
 	.box {
-		border: 10px solid #000000;
+		border: 10px solid #121212;
 		position: absolute;
 		top: 0;
 		right: 0;

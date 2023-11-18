@@ -1,95 +1,67 @@
 <script>
-	import { onMount } from 'svelte';
 	import Card from '../components/card.svelte';
-	import {loading} from '../store'
-	import { goto } from "$app/navigation";
+	import { browser } from '$app/environment';
+	import { fade } from 'svelte/transition';
 
-	function handle() {
-		$loading = true;
-		setTimeout(()=> {
-			$loading=false
-			goto('/assetmanager')
-		},1000)
-	}
-	onMount(()=> {
-		console.log('home loaded');
-	});
+	// // scrolls down under the fold
+	// function handleClick() {
+	// 	document.getElementById('fold').scrollIntoView({
+	// 		behavior: 'smooth'
+	// 	});
+	// }
+	// handle button
+	let top = false;
+	let yLocation = 0;
+	if (browser) {
+		window.onscroll = () => {
+			yLocation = window.scrollY;
 
-	// scrolls down under the fold
-	function handleClick() {
-		document.getElementById('fold').scrollIntoView({
-			behavior: 'smooth'
-		});
-	}
-
-	// animation for entering the page
-	let isActive = true;
-	function handleActive() {
-		isActive = true;
-		setTimeout(() => {
-			isActive = false;
-		}, 2000);
-		return '';
-	}
-
-	// animation for leaving the page
-	let isEndActive = false;
-	function handlePageTransition(url) {
-		isEndActive = true;
-		setTimeout(() => {
-			window.location.href = url;
-		}, 500);
+			if (yLocation >= 500) {
+				top = true;
+			} else {
+				top = false;
+			}
+		};
 	}
 </script>
 
-<!-- animation for leaving the page -->
-<!-- <div
-	class={isEndActive
-		? 'active px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'
-		: 'inactive px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'}
-/> -->
-
-<!-- animation for entering the page -->
-<!-- <div
-	class={isActive
-		? 'active px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'
-		: 'inactive px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'}
->
-	<video src="/asset/logo.mp4" type="video/mp4" class="h-16" autoplay muted />
-</div> -->
-
 <!-- body -->
-<div class="px-6 md:px-8 lg:px-16 grid3" onload={handleActive()}>
-	<div class="">
-		<section class="pt-6 pb-6 md:pt-8 md:pb-16 sticky top-0 flex flex-col justify-end h-screen">
-			<div class="flex flex-col gap-y-8 content-end  pr-8">
-				<div class="bg-text-default w-1/4 h-0.5" />
-				<div class="text-base md:text-lg text-text-subdued">
-					Hi, I'm Christopher, a product designer with a software engineering background. <br /><br
-					/>
-					I'm passionate about designing and building
-					<span class="font-bold text-text-default">accessible</span>
-					and <span class="font-bold text-text-default">intuitive</span> experiences.<br /><br />
-					Currently designing at
+<div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid3">
+	<section
+		class="pt-6 pb-6 sm:pt-8 sm:pb-16 sm:sticky sm:top-0 flex flex-col justify-end sm:h-screen"
+	>
+		<div class="flex flex-col gap-y-8 content-end pr-8">
+			<div class="hidden sm:block bg-text-default w-1/4 h-0.5" />
+			<div
+				class="text-2xl leading-relaxed sm:text-base md:text-lg text-text-subdued gap-4 flex flex-col font-light"
+			>
+				<p>
+					Hi, I'm Christopher, a product designer focused on
+					<span class="font-bold text-text-default">data driven</span>
+					and <span class="font-bold text-text-default">intuitive</span> experiences. My strength lies
+					in my hybrid developer perspective—aquired through a background in software engineering
+				</p>
+				<p>
+					Currently at
 					<a
 						class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover"
 						href="https://www.trulioo.com/"
 						target="_blank">Trulioo</a
-					>.<br />
-				</div>
-				<span class="flex flex-row gap-6">
-					<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
-						<img src={'/github.png'} alt="logo" class="w-8" />
-					</a>
-					<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
-						<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
-					</a>
-				</span>
+					> working on design systems, internal tools and platform capabilities.
+				</p>
 			</div>
-		</section>
-	</div>
+			<span class="flex flex-row gap-6">
+				<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
+					<img src={'/github.png'} alt="logo" class="w-8" />
+				</a>
+				<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
+					<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
+				</a>
+			</span>
+		</div>
+	</section>
 
-	<section class="flex flex-col gap-y-8 pt-6 pb-6 md:pt-8 md:pb-16">
+	<section class="flex flex-col gap-y-8 pt-6 pb-6 sm:pt-8 sm:pb-16" id="top">
 		<div class="flex flex-col gap-y-2">
 			<div class="bg-text-default w-full h-0.5" />
 			<h1 class="text-xl font-bold">SELECTED WORK</h1>
@@ -102,8 +74,8 @@
 				t1={'Product Design'}
 				t2={'Design Tooling'}
 				url={'/assetmanager'}
-				onClick={handlePageTransition}
 			/>
+
 			<div id="fold">
 				<Card
 					title={'Trulioo Design Linter'}
@@ -111,8 +83,7 @@
 					slug="/design-lint-card.png"
 					t1={'Product Design'}
 					t2={'Design Tooling'}
-					url={'/design-lint'}
-					onClick={handlePageTransition}
+					url={'/tds'}
 				/>
 			</div>
 			<Card
@@ -122,24 +93,24 @@
 				t1={'Design System'}
 				t2={'Accessibility'}
 				url={'/accessibility'}
-				onClick={handlePageTransition}
 			/>
 		</div>
 	</section>
-	<div class="hidden md:block">
+	<div class="hidden sm:block">
 		<section
-			class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 md:pt-8 md:pb-16"
+			class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 sm:pt-8 sm:pb-16"
 		>
-			<div
-				role="button"
-				tabindex="0"
-				class="flex flex-row rotate gap-x-4 content-center"
-				on:click={handleClick}
-				on:keypress={handleClick}
-			>
-				<span class="whitespace-nowrap">scroll down</span>
-				<img src="/scroll.svg" alt="scroll" class="bounce w-16" />
-			</div>
+			{#if !top}
+				<a
+					href="#fold"
+					in:fade={{ delay: 250, duration: 250 }}
+					out:fade={{ duration: 250 }}
+					class="flex flex-row rotate gap-x-4 content-center"
+				>
+					<span class="whitespace-nowrap text-text-subdued">scroll down</span>
+					<img src="/scroll.svg" alt="scroll" class="bounce w-16" />
+				</a>
+			{/if}
 		</section>
 	</div>
 </div>
@@ -156,11 +127,19 @@
 		top: -100%;
 		transition: top 0.3s ease-out, opacity 0.3s ease-in-out;
 	} */
+
 	.grid3 {
-		display: grid;
-		grid-template-columns: 2fr 6fr; /* 1/4, 5/8, 1/8 proportions */
-		gap: 32px;
+		display: flex;
+		flex-direction: column;
+		gap: 0px;
+		@media screen and (min-width: 640px) {
+			display: grid;
+			grid-template-columns: 2fr 6fr; /* 1/4, 5/8, 1/8 proportions */
+			gap: 32px;
+		}
 		@media screen and (min-width: 768px) {
+			display: grid;
+			gap: 32px;
 			grid-template-columns: 2fr 5fr 1fr; /* 1/4, 5/8, 1/8 proportions */
 		}
 	}
