@@ -23,7 +23,7 @@ export default {
             'surface-+2': '#E5E5E5',
             'surface-+3': '#BFBFBF',
             'surface-0': '#FFFFFF',
-            'surface-inverse': '#121212',
+            'surface-inverse': '#000000',
             'text-default': '#121212',
             'text-disabled': '#BFBFBF',
             'text-inverse-default': '#FFFFFF',

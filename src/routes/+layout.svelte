@@ -1,6 +1,7 @@
 <script>
 	import '../app.scss';
 	import { goto } from '$app/navigation';
+	import { fly } from 'svelte/transition';
 	import { browser } from '$app/environment';
 
 	import Logo from '../components/logo.svelte';
@@ -87,10 +88,12 @@
 	</button>
 </div>
 
+{#if isActive}
+
 <nav
-	class={isActive
-		? 'navi2 px-8 sm:px-8 lg:px-16 py-8 bg-surface-inverse z-20 fixed h-screen w-screen'
-		: 'navi px-8 sm:px-8 lg:px-16 py-8 bg-surface-inverse z-20 fixed h-screen w-screen'}
+	transition:fly={{duration:300,y:'-100vh'}}
+	
+	class={'px-8 sm:px-8 lg:px-16 py-8 bg-surface-inverse z-20 fixed h-screen w-screen'}
 >
 	<div
 		class={isActive
@@ -121,17 +124,8 @@
 		Designed and developed by Christopher Su
 	</p>
 </nav>
+{/if}
 <slot />
 
 <style>
-	.navi2 {
-		top: 0;
-		opacity: 1;
-		transition: top 0.3s ease-out, opacity;
-	}
-
-	.navi {
-		top: -100%;
-		transition: top 0.3s ease-out, opacity;
-	}
 </style>
