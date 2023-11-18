@@ -122,7 +122,7 @@
 			</div>
 			<div class="flex flex-col gap-2 items-end">
 				<div class={video}>
-					<video src="/asset/swap-assets.mp4" type="video/mp4" class="w-full" autoplay muted loop />
+					<video src="/asset/swap-assets.mp4" type="video/mp4" class="w-full" autoplay playsinline muted loop />
 				</div>
 				<div class="">
 					<span class={numfoot}>0.1 </span><span class={footer}>Swap assets</span>
