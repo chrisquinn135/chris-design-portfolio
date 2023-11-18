@@ -14,7 +14,7 @@
 
     <video src={$destination == '/assetmanager' ? "/curtain/blue.mp4" :
     $destination == '/tds' ? "/curtain/green.mp4" :
-    $destination == '/accessibility' ? "/curtain/yellow.mp4" : "/curtain/orange.mp4"} type="video/mp4" class="h-16" autoplay muted />
+    $destination == '/accessibility' ? "/curtain/yellow.mp4" : "/curtain/orange.mp4"} type="video/mp4" class="h-16" autoplay playsinline muted />
 </div>
 
 
