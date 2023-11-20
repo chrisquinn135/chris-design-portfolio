@@ -570,7 +570,7 @@
 					<div class={body}>
 						Once the solution was finalized, I began research on how to implement an asset manager
 						through the usage of Figma APIs. I cloned <a
-							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover"
+							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline" 
 							href="https://github.com/destefanis/design-lint"
 							target="_blank">Daniel Destefanis' Design Lint</a
 						>
