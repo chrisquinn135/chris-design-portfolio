@@ -3,13 +3,6 @@
 	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
 
-	// // scrolls down under the fold
-	// function handleClick() {
-	// 	document.getElementById('fold').scrollIntoView({
-	// 		behavior: 'smooth'
-	// 	});
-	// }
-	// handle button
 	let top = false;
 	let yLocation = 0;
 	if (browser) {
@@ -38,15 +31,15 @@
 				class="text-2xl leading-relaxed sm:text-base md:text-lg text-text-subdued gap-4 flex flex-col font-light"
 			>
 				<p>
-					Hi, I'm Christopher, a product designer focused on
-					<span class="font-bold text-text-default">data driven</span>
-					and <span class="font-bold text-text-default">intuitive</span> experiences. My strength lies
-					in my hybrid developer perspective—aquired through a background in software engineering
+					Hi, I'm Christopher, a product designer focused on delivering
+					data
+					and purpose driven experiences. My strength lies
+					in my hybrid developer perspective—aquired through a background in software engineering.
 				</p>
 				<p>
 					Currently at
 					<a
-						class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover"
+						class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover"
 						href="https://www.trulioo.com/"
 						target="_blank">Trulioo</a
 					> working on design systems, internal tools and platform capabilities.

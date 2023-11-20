@@ -62,7 +62,7 @@
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background: black;
+		background: #000000;
 		transition: left 0.2s ease-in-out; /* Adjust the transition duration as needed */
 		z-index: -1;
 	}
@@ -81,7 +81,7 @@
 	}
 
 	.box {
-		border: 10px solid #121212;
+		border: 10px solid #000000;
 		position: absolute;
 		top: 0;
 		right: 0;
