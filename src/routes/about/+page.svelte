@@ -1,17 +1,12 @@
 <script>
+	import Footer from "../../components/footer.svelte";
+
 	// font styles
 	let h1 = 'text-3xl sm:text-4xl font-bold';
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
-	let numfoot = 'text-text-default text-sm font-bold';
-	let footer = 'text-text-subdued text-sm font-light';
-	// content styles
-	let video = 'p-2 sm:p-8 bg-surface-+1 rounded-lg';
-	// section styles
-	let section = 'flex flex-col gap-8 sm:gap-16';
 	let div = 'grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16 self-start w-full';
-	let container = 'flex flex-col gap-4 sm:gap-8';
 </script>
 
 <!-- Body content -->
@@ -107,11 +102,11 @@
 					<div class='flex flex-col gap-4'><h3 class={h3}>I’m Chris, a product designer based in San Diego!</h3>
 						<span>
 							I bring a unique lens to
-							product design through combining my development background and design skills to build
+							product design through combining my development background and design skills to create
 							meaningful and delightful experiences for everyone to enjoy.
 							<br /><br />I believe that great design is about more than just aesthetics; it's about
-							solving real problems and creating meaningful experiences that that users love. Let's
-							make things amazing together
+							solving real problems and building products that that users love. Let's
+							make things amazing together!
 						</span></div>
 
 				</div>
@@ -124,11 +119,11 @@
 							christophersu02@gmail.com or any of my socials below!
 						</span></div>
 					<span class="flex flex-row gap-6">
-						<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
-							<img src={'/github.png'} alt="logo" class="w-8" />
-						</a>
 						<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
 							<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
+						</a>
+						<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
+							<img src={'/github.png'} alt="logo" class="w-8" />
 						</a>
 					</span>
 				</div>
@@ -192,7 +187,7 @@
 				<div class={body}>
 					• Born in Minnesota, raised in California <br/><br/>
 					• A <a class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover" href='https://mycreativetype.com/type/producer/' target='_blank' >Producer</a> (Analytical | Dynamic | Pragmatic | Goal-Oriented)<br/><br/>
-					• A <a class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover" href='https://www.16personalities.com/estj-personality/' target='_blank' >ESTJ-A</a> (Extroverted | Observant | Thinking | Judging | Assertive)<br/><br/>
+					• A <a class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover" href='https://www.16personalities.com/estj-personality/' target='_blank' >ESTJ-A</a> (Extroverted | Observant | Thinking | Judging | Assertive)
 				</div>
 			</div>
 			<div class={div}>
@@ -201,11 +196,12 @@
 					• Coding my next plugin (stay tuned!!) 🖥️<br/><br/>
 					• Attempting to learn latte art ☕<br/><br/>
 					• Training for my next half marathon 🏃<br/><br/>
-					• Trying to keep my plants alive 🪴<br/><br/>
+					• Trying to keep my plants alive 🪴
 				</div>
 			</div>
 			<img src={'/cover.jpg'} alt="cover" class="rounded-lg" />
 		</div>
+		<Footer/>
 	</section>
 
 	<div class="hidden md:block">
@@ -229,5 +225,16 @@
 			gap: 32px;
 			grid-template-columns: 2fr 5fr 1fr; /* 1/4, 5/8, 1/8 proportions */
 		}
+	}
+
+	.hover {
+		transform: none;
+		transform-origin: 50% 50% 0px;
+		opacity: 1;
+		transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.2s ease;
+	}
+
+	.hover:hover {
+		transform: translate3d(0px, -4px, 0px);
 	}
 </style>
