@@ -1,5 +1,6 @@
 <script>
 	import Card from '../../components/card.svelte';
+	import Footer from '../../components/footer.svelte';
 	// font styles
 	let h1 = 'text-3xl sm:text-4xl font-bold';
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
@@ -415,6 +416,7 @@
 				url={'/assetmanager'}
 			/>
 		</div>
+		<Footer/>
 	</section>
 
 	<div class="hidden sm:block">

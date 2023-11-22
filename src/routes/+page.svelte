@@ -2,6 +2,7 @@
 	import Card from '../components/card.svelte';
 	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
+	import Footer from '../components/footer.svelte';
 
 	let top = false;
 	let yLocation = 0;
@@ -33,7 +34,7 @@
 				<p>
 					Hi, I'm Christopher, a product designer focused on delivering
 					data
-					and purpose driven experiences. My strength lies
+					and purpose-driven experiences. My strength lies
 					in my hybrid developer perspective—aquired through a background in software engineering.
 				</p>
 				<p>
@@ -46,11 +47,11 @@
 				</p>
 			</div>
 			<span class="flex flex-row gap-6">
-				<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
-					<img src={'/github.png'} alt="logo" class="w-8" />
-				</a>
 				<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
 					<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
+				</a>
+				<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
+					<img src={'/github.png'} alt="logo" class="w-8" />
 				</a>
 			</span>
 		</div>
@@ -90,6 +91,7 @@
 				url={'/accessibility'}
 			/>
 		</div>
+		<Footer/>
 	</section>
 	<div class="hidden sm:block">
 		<section
