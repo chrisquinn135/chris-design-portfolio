@@ -3,6 +3,7 @@
 	import Footer from '../../components/footer.svelte';
 	// font styles
 	let h1 = 'text-3xl sm:text-4xl font-bold';
+	let h2 = 'text-text-subdued text-lg sm:text-2xl';
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
@@ -410,7 +411,7 @@
 			<Card
 				title={'Asset Manager'}
 				desc={'Centralizing Assets for Improved Consistency Across the Platform'}
-				slug="/asset-card.png"
+				slug="/ha.png"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
 				url={'/assetmanager'}

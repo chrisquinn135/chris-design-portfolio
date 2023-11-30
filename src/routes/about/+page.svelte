@@ -68,6 +68,9 @@
 							<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
 								<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
 							</a>
+							<a href="./christopher-su-resume.pdf" target="_blank" class="hover">
+								<span class='text-sm underline'>Resume</span>
+							</a>
 						</span>
 					</div>
 				</div>
