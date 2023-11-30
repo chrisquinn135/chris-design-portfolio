@@ -32,10 +32,7 @@
 				class="text-2xl leading-relaxed sm:text-base md:text-lg text-text-subdued gap-4 flex flex-col font-light"
 			>
 				<p>
-					Hi, I'm Christopher, a product designer focused on delivering
-					data
-					and purpose-driven experiences. My strength lies
-					in my hybrid developer perspective—aquired through a background in software engineering.
+					Hi, I'm Christopher—a <span class='font-bold text-text-default'>product designer with a developer's perspective</span>, aquired through a background in software engineering. 
 				</p>
 				<p>
 					Currently at
@@ -64,9 +61,9 @@
 		</div>
 		<div class="flex flex-col gap-y-16" data-sveltekit-preload-data="hover">
 			<Card
-				title={'Asset Manager'}
-				desc={'Centralizing Assets for Improved Consistency Across the Platform'}
-				slug="/asset-card.png"
+			title={'Asset Manager'}
+			desc={'Centralizing Assets for Improved Consistency Across the Platform'}
+				slug="/ha.png"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
 				url={'/assetmanager'}
@@ -76,7 +73,7 @@
 				<Card
 					title={'Trulioo Design Linter'}
 					desc={'Introducing Automation to the Design Review Process'}
-					slug="/design-lint-card.png"
+					slug="/tds-hero.png"
 					t1={'Product Design'}
 					t2={'Design Tooling'}
 					url={'/tds'}
@@ -85,7 +82,7 @@
 			<Card
 				title={'Accessibility at Trulioo'}
 				desc={'Introducing Accessibility into the Trulioo Design System'}
-				slug="/accessibility-card.png"
+				slug="/acc-hero.png"
 				t1={'Design System'}
 				t2={'Accessibility'}
 				url={'/accessibility'}

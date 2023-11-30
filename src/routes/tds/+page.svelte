@@ -3,6 +3,7 @@
 	import Footer from '../../components/footer.svelte'
 	// font styles
 	let h1 = 'text-3xl sm:text-4xl font-bold';
+	let h2 = 'text-text-subdued text-lg sm:text-2xl';
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
@@ -92,9 +93,9 @@
 		<div class="flex flex-col gap-4">
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
-				<h2 class={h3}>TRULIOO DESIGN LINTER</h2>
 			</div>
-			<h1 class={h1}>Introducing Automation to the Design Process</h1>
+			<h1 class={h1}>Trulioo Design Linter — Custom Figma Plugin</h1>
+			<h2 class={h2}>Introducing Automation to the Design Process</h2>
 		</div>
 		<img src={'/tds/hero.webp'} alt="hero" />
 		<section class={section} id="overview">
@@ -506,7 +507,7 @@
 			<Card
 				title={'Accessibility at Trulioo'}
 				desc={'Introducing Accessibility into the Trulioo Design System'}
-				slug="/accessibility-card.png"
+				slug="/acc-hero.png"
 				t1={'Design System'}
 				t2={'Accessibility'}
 				url={'/accessibility'}
