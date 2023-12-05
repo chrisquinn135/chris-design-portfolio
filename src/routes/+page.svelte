@@ -32,7 +32,7 @@
 				class="text-2xl leading-relaxed sm:text-base md:text-lg text-text-subdued gap-4 flex flex-col font-light"
 			>
 				<p>
-					Hi, I'm Christopher—a <span class='font-bold text-text-default'>product designer with a developer's perspective</span>, aquired through a background in software engineering. 
+					Hi, I'm Christopher—a <span class='font-bold text-text-default'>product designer with a developer's perspective</span>, acquired through a background in software engineering. 
 				</p>
 				<p>
 					Currently at
@@ -51,7 +51,7 @@
 					<img src={'/github.png'} alt="logo" class="w-8" />
 				</a>
 				<a href="./christopher-su-resume.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
-					<span class="text-sm font-medium text-text-default">Resume</span>
+					<span class="text-sm font-bold text-text-default">Resume</span>
 				</a>
 			</span>
 		</div>

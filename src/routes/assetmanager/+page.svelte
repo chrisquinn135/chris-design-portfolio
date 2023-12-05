@@ -18,7 +18,8 @@
 	let img =
 		'p-2 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued';
 	// 'p-2 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-text-subdued gap-8 font-light border border-2 border-text-default shadow-[0_3px_0_0_rgba(0,0,0,1)]';
-
+	let imgPad =
+		'p-2 pb-1 sm:p-8 sm:pb-4 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued';
 	// section styles
 	let section = 'flex flex-col gap-8 sm:gap-16';
 	let div = 'grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16';
@@ -45,16 +46,23 @@
 					</li>
 					<li>
 						<a
-							href="#problem"
+							href="#asset"
 							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Problem space</a
+							>Platform audit</a
 						>
 					</li>
 					<li>
 						<a
-							href="#feature"
+							href="#user"
 							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Feature definition</a
+							>Updating user journey</a
+						>
+					</li>
+					<li>
+						<a
+							href="#ideation"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Ideation</a
 						>
 					</li>
 					<li>
@@ -83,6 +91,13 @@
 							href="#impact"
 							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
 							>Impact</a
+						>
+					</li>
+					<li>
+						<a
+							href="#retrospection"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Retrospection</a
 						>
 					</li>
 				</ul>
@@ -160,7 +175,7 @@
 						</span>, necessitating time-consuming review sessions and error-checking processes.
 					</div>
 				</div>
-				<div class={img}>
+				<div class={imgPad}>
 					<p>Three empty states with different illustrations and text</p>
 					<img
 						src="/asset/multiple-comb.png"
@@ -178,14 +193,24 @@
 						text throughout the platform.
 					</div>
 				</div>
-				<div class={img}>
+				<div
+					class="p-2 pb-1 sm:pb-4 pr-0 sm:pr-0 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued"
+				>
+					<p>Example asset combinations</p>
+					<img
+						src="/asset/example.png"
+						alt="User journey map and related problem origins"
+						class="rounded-lg w-full"
+					/>
+				</div>
+				<!-- <div class={img}>
 					<p>Proposed workflow for selecting assets</p>
 					<img
 						src="/asset/updated-flow.png"
 						alt="User journey map and related problem origins"
 						class="rounded-lg w-full"
 					/>
-				</div>
+				</div> -->
 			</div>
 			<div class={container}>
 				<div class={div}>
@@ -194,14 +219,15 @@
 						After championing and gaining support for the creation of a design tool, I led both the
 						design and development efforts for this project, collaborating daily with leadership and
 						the design team to ensure product fit. <br /><br />I conducted audits, facilitated
-						workshops and led the visual, interaction and userflow tracks all while working on the technical implementation of the tool from start to launch.
+						workshops and led the visual, interaction and user flow tracks all while leading the
+						technical implementation of the tool from conception to launch.
 					</div>
 				</div>
 			</div>
 			<div class="bg-border-subdued w-full h-px" />
 		</section>
 		<!-- problem section -->
-		<section class={section} id="problem">
+		<section class={section} id="asset">
 			<div>
 				<h2 class={h1}>02 <br />Tackling the core problem</h2>
 			</div>
@@ -261,26 +287,90 @@
 			<div class="bg-border-subdued w-full h-px gap-2" />
 		</section>
 		<!-- opportunity section -->
-		<section class={section} id="feature">
+		<section class={section} id="user">
 			<div>
-				<h2 class={h1}>03<br />Feature definition</h2>
+				<h2 class={h1}>03<br />Updating the journey</h2>
 			</div>
 			<div class={container}>
 				<div class={div}>
-					<h3 class={h3}>Figuring out the direction</h3>
+					<h3 class={h3}>Pinpointing the issues</h3>
+					<p class={body}>
+						Structuring the user journey allowed me to identify the pain points in the asset
+						selection process.
+						<br /><br />
+						Designers had been referencing different designs and use-cases when using assets, resulting
+						in conflicting usage across teams. In addition, the current process required a significant
+						time investment in the designer workflows due to the neccessity for manual coordination between
+						designers.
+					</p>
+				</div>
+				<div class={img}>
+					<div>User journey map and related problem origins</div>
+					<img
+						src="/asset/user-flow.jpg"
+						alt="User journey map and related problem origins"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class={container}>
+				<div class={div}>
+					<h3 class={h3}>Rethinking the user journey</h3>
 					<div class={body}>
-						I conducted interviews with the design team to understand their goals, content
-						preferences, and how they currently might interact with design tools. I also audited and
-						researched best-in-class design tools and learned how they tackled asset retrieval and
-						insertion.<br /><br />
-						After several alignment sessions, I was able to hammer out the list of features and requirements
-						to focus our attention on.
+						By integrating a design tool into the user journey, we will be able to significantly
+						decrease the time investment necessary in addition to ensuring consistent asset usage.<br
+						/><br />
 					</div>
 				</div>
 				<div class={img}>
-					<p>Asset retrieval and insertion features</p>
+					<p>Updated user flow</p>
 					<img
-						src="/asset/asset-feature.png"
+						src="/asset/updated-flow.png"
+						alt="Consolidating different asset combinations"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class="bg-border-subdued w-full h-px gap-2" />
+		</section>
+
+		<section class={section} id="ideation">
+			<div>
+				<h2 class={h1}>04<br />Landing on a solution</h2>
+			</div>
+			<div class={container}>
+				<div class={div}>
+					<h3 class={h3}>Selecting a tool</h3>
+					<div class={body}>
+						Several tools were suggested to house our asset repository, including tools like Google
+						Docs and custom Figma plugins.<br /><br />
+						I made the decision to create a custom Figma plugin because of its superior integration capabilities
+						into designer workflows. While the development period would be higher, the plugin would cut
+						down on the asset selection journey and allow designers to focus on delivering great user
+						experiences.
+					</div>
+				</div>
+				<div class={img}>
+					<img
+						src="/asset/figma-doc.png"
+						alt="User journey map and related problem origins"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class={container}>
+				<div class={div}>
+					<h3 class={h3}>Feature definition</h3>
+					<div class={body}>
+						Several alignment sessions later, I was able to hammer out the list of features and
+						requirements to focus our attention on. <br /><br />
+						We boiled down the core functionality to focus on how a user can retrieve and insert specific
+						assets.
+					</div>
+				</div>
+				<div class={imgPad}>
+					<img
+						src="/asset/insert-retrieve.png"
 						alt="Consolidating different asset combinations"
 						class="rounded-lg w-full"
 					/>
@@ -292,7 +382,16 @@
 		<!-- Design iteration section -->
 		<section class={section} id="design">
 			<div>
-				<h2 class={h1}>04<br />Design iteration</h2>
+				<h2 class={h1}>05<br />Design iteration</h2>
+			</div>
+			<div class={container}>
+				<div class={div}>
+					<h3 class={h3}>Testing initial designs</h3>
+					<div class={body}>
+						Once the initial designs were complete, I ran moderated user tests with three designers and iterated
+						on the designs based on the gathered insights. 
+					</div>
+				</div>
 			</div>
 			<div class={container}>
 				<div class={div}>
@@ -304,7 +403,7 @@
 						replacing the tag filter system with a more robust filter and sort mechanism.
 					</div>
 				</div>
-				<div class={img}>
+				<div class={imgPad}>
 					<p>Organization and filter system improvements</p>
 					<img
 						src="/asset/org-filter.png"
@@ -357,7 +456,7 @@
 						</div>
 					</div>
 				</div>
-				<div class={img}>
+				<div class={imgPad}>
 					<p>Individual asset screen improvements</p>
 					<img
 						src="/asset/improved-ind.png"
@@ -371,21 +470,23 @@
 		<!-- development section -->
 		<section class={section} id="dev">
 			<div>
-				<h2 class={h1}>05<br />Development</h2>
+				<h2 class={h1}>06<br />Development</h2>
 			</div>
 			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Diving into implementation</h3>
 					<div class={body}>
-						The following section is a quick dive into the technical implementation of the asset
-						manager. If you're more interested in the designs, feel free to jump to the <a
+						The following section is a quick dive into the technical implementation of the plugin.
+						If you're more interested in the designs, feel free to jump to the <a
 							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
 							href="#launch">launch</a
 						>
 						section to see the final designs and implementation.
 						<br /><br />
-						For this section, I'll focus mainly on the component insertion logic, namely adding and swapping
-						assets. If you'd like to learn more, you can visit the
+						I lead development efforts for both the frontend (UI) and backend logic and collaborated
+						with developers on code best practices and implementation.<br/><br/>For this section, I'll focus mainly
+						on the component insertion logic, namely adding and swapping assets. If you'd like to learn
+						more, you can visit the
 						<a
 							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
 							href="https://github.com/trulioo-visual-team/asset-finder"
@@ -416,9 +517,9 @@
 				</div>
 				<div class={img}>
 					<img
-						src="/asset/sample-code.png"
+						src="/asset/json.png"
 						alt="Individual asset screen improvements"
-						class="rounded-lg w-full"
+						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)] "
 					/>
 				</div>
 			</div>
@@ -437,9 +538,9 @@
 				</div>
 				<div class={img}>
 					<img
-						src="/asset/add-logic.png"
+						src="/asset/addins.png"
 						alt="Individual asset screen improvements"
-						class="rounded-lg w-full"
+						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
 			</div>
@@ -461,9 +562,9 @@
 				</div>
 				<div class={img}>
 					<img
-						src="/asset/swap-logic.png"
+						src="/asset/swapins.png"
 						alt="Individual asset screen improvements"
-						class="rounded-lg w-full"
+						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
 			</div>
@@ -472,7 +573,7 @@
 		<!-- Final designs section -->
 		<section class={section} id="launch">
 			<div>
-				<h2 class={h1}>06<br />Introducing the Asset Manager</h2>
+				<h2 class={h1}>07<br />Introducing the Asset Manager</h2>
 			</div>
 			<div class={container}>
 				<div class={div}>
@@ -487,7 +588,7 @@
 						functionalities.
 					</div>
 				</div>
-				<div class={img}>
+				<div class={imgPad}>
 					<img src="/asset/group.png" alt="illustration assets" class="rounded-lg w-full" />
 				</div>
 				<div class={videoWrapper}>
@@ -511,7 +612,7 @@
 						able to swap entire groups of content for text assets.
 					</p>
 				</div>
-				<div class={img}>
+				<div class={imgPad}>
 					<img src="/asset/swap-and-add.png" alt="illustration assets" class="rounded-lg w-full" />
 				</div>
 
@@ -544,45 +645,95 @@
 		<!-- Impact section -->
 		<section class={section} id="impact">
 			<div>
-				<h2 class={h1}>07<br />Impact and retrospection</h2>
+				<h2 class={h1}>08<br />Impact and what's next</h2>
 			</div>
 			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Shipped and integrated</h3>
 					<div class="flex flex-col gap-4">
 						<p class={body}>
-							At this moment, the asset manager has been shipped to the entire design team and
-							integrated into every designer's workflow.
-							<br /><br />Results have seen:
+							The asset manager tool has been officially released to the entire design team and
+							integrated into every designer's workflow, leading to great improvements in both the
+							efficiency and consistency of new features.
+							<br /><br />
+							In addition, stakeholder interest in future design tooling projects skyrocketed with several
+							ideas in the pipeline for the future.
+						</p>
+					</div>
+				</div>
+				<div class={imgPad}>
+					<p>KPI results since release</p>
+					<img
+						src="/asset/improve.png"
+						alt="Individual asset screen improvements"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class={container}>
+				<div class={div}>
+					<h3 class={h3}>Where are we going?</h3>
+					<div class="flex flex-col gap-4">
+						<p class={body}>
+							We are still experimenting and collecting metrics on how the Asset Manager can be
+							improved in the future adoption and impact-wise, but as a start, here are some things
+							we're looking at for the future of the Asset Manager!
 						</p>
 						<div
 							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
 						>
+							<p class={label}>Cross-functional implementation</p>
 							<p class={body}>
-								Illustration inconsistencies <span class={label}>reduced by over 80%</span>.
+								Being able to integrate to the entire design team is great, but what if we could
+								integrate to the entire organization. Developers could be pulling from the same
+								database as designers, ensuring 100% accuracy and consistency in both design and
+								development implementation.
 							</p>
 						</div>
 						<div
 							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
 						>
+							<p class={label}>Cloud database integration</p>
 							<p class={body}>
-								<span class={label}>2 hours saved per project </span>selecting, aligning and
-								creating assets and text.
+								Currently, component keys and asset information is being stored locally within the
+								plugin source code. Moving it to an external database would allow designers to
+								update, add and remove assets without releasing a new version of the plugin.
+							</p>
+						</div>
+						<div
+							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
+						>
+							<p class={label}>Analytics and metrics tracking</p>
+							<p class={body}>
+								The Asset Manager could track all insertions of assets across all projects, allowing
+								the team to get deeper insight into what assets are being used, not used, and
+								edited.
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="bg-border-subdued w-full h-px gap-2" />
+		</section>
+		<!-- Impact section -->
+		<section class={section} id="retrospection">
+			<div>
+				<h2 class={h1}>09<br />Retrospection</h2>
+			</div>
 			<div class={container}>
 				<div class={div}>
-					<h3 class={h3}>Retrospection</h3>
+					<h3 class={h3}>What I learned</h3>
 					<div class="flex flex-col gap-4">
 						<p class={body}>
 							During this project, I was able to gain valuable experience in <span class={label}
 								>collaborative design and stakeholder management</span
 							>. Because this project affects the design process of all designers in our team, I had
-							to ensure that I got feedback and buy in from stakeholders and designers.<br /> <br />
-							In addition, I was able to continue
+							to ensure that I got feedback and buy in from stakeholders and designers.
+							<br /><br />In addition, I was able to work hand-in-hand with developers on not only
+							the design process, but also the development process. Not only did I foster a great
+							relationship with them, but I also got hands-on insight on the developer's thought
+							process.<br /> <br />
+							Lastly, I was able to continue
 							<span class={label}
 								>polishing up my skills in Figma plugin development and bring great results to our
 								design system!</span
