@@ -11,10 +11,6 @@
 
 	// text styles
 	let h2 = 'text-2xl sm:text-3xl font-bold text-container'
-	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
-
-	const textWhite = 'text-text-inverse';
-	const textBlack = 'text-text-primary';
 
 	function handle(url) {
 		$destination = url;

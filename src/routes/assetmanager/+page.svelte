@@ -8,9 +8,7 @@
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
-	let numfoot = 'text-text-default text-sm font-bold';
 	let code = 'bg-surface-+1 py-1 px-2 text-text-default text-sm';
-	let footer = 'text-text-subdued text-sm font-light';
 	// content styles
 	let videoWrapper =
 		'p-2 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-text-subdued gap-8 font-light border border-border-subdued';
@@ -112,7 +110,7 @@
 			<h1 class={h1}>Asset Manager — Custom Figma Plugin</h1>
 			<h2 class={h2}>Centralizing Assets for Improved Consistency Across the Platform</h2>
 		</div>
-		<img src={'/asset/hero-image.png'} alt="hero" class="rounded-lg w-full" />
+		<img src={'/asset/hero.png'} alt="hero" class="rounded-lg w-full" />
 		<section class={section}>
 			<div class={div}>
 				<div class="flex flex-col gap-8 sm:gap-16">
@@ -150,7 +148,7 @@
 					loop
 				/>
 				<img
-					src="/asset/asset-he.png"
+					src="/asset/asset-hero2.png"
 					alt="User journey map and related problem origins"
 					class="rounded-lg w-full"
 				/>
@@ -198,7 +196,7 @@
 				>
 					<p>Example asset combinations</p>
 					<img
-						src="/asset/example.png"
+						src="/asset/current-implementation.png"
 						alt="User journey map and related problem origins"
 						class="rounded-lg w-full"
 					/>
@@ -307,7 +305,7 @@
 				<div class={img}>
 					<div>User journey map and related problem origins</div>
 					<img
-						src="/asset/user-flow.jpg"
+						src="/asset/user-flow.png"
 						alt="User journey map and related problem origins"
 						class="rounded-lg w-full"
 					/>
