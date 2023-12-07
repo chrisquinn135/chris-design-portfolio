@@ -587,7 +587,7 @@
 					</div>
 				</div>
 				<div class={imgPad}>
-					<img src="/asset/group.png" alt="illustration assets" class="rounded-lg w-full" />
+					<img src="/asset/filter-sort.png" alt="illustration assets" class="rounded-lg w-full" />
 				</div>
 				<div class={videoWrapper}>
 					<video
