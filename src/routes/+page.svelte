@@ -76,7 +76,7 @@
 				<Card
 					title={'Trulioo Design Linter'}
 					desc={'Introducing Automation to the Design Review Process'}
-					slug="/tds-avif.png"
+					slug="/tds-hero.avif"
 					t1={'Product Design'}
 					t2={'Design Tooling'}
 					url={'/tds'}
