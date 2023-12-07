@@ -66,7 +66,7 @@
 			<Card
 			title={'Asset Manager'}
 			desc={'Centralizing Assets for Improved Consistency Across the Platform'}
-				slug="/asset-hero.png"
+				slug="/asset-hero.avif"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
 				url={'/assetmanager'}
@@ -76,7 +76,7 @@
 				<Card
 					title={'Trulioo Design Linter'}
 					desc={'Introducing Automation to the Design Review Process'}
-					slug="/tds-hero.png"
+					slug="/tds-avif.png"
 					t1={'Product Design'}
 					t2={'Design Tooling'}
 					url={'/tds'}
@@ -85,7 +85,7 @@
 			<Card
 				title={'Accessibility at Trulioo'}
 				desc={'Introducing Accessibility into the Trulioo Design System'}
-				slug="/acc-hero.png"
+				slug="/acc-hero.avif"
 				t1={'Design System'}
 				t2={'Accessibility'}
 				url={'/accessibility'}

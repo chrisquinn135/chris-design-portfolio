@@ -411,7 +411,7 @@
 			<Card
 				title={'Asset Manager'}
 				desc={'Centralizing Assets for Improved Consistency Across the Platform'}
-				slug="/asset-hero.png"
+				slug="/asset-avif.png"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
 				url={'/assetmanager'}

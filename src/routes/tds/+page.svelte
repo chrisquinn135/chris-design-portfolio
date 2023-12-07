@@ -507,7 +507,7 @@
 			<Card
 				title={'Accessibility at Trulioo'}
 				desc={'Introducing Accessibility into the Trulioo Design System'}
-				slug="/acc-hero.png"
+				slug="/acc-hero.avif"
 				t1={'Design System'}
 				t2={'Accessibility'}
 				url={'/accessibility'}
