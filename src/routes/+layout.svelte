@@ -109,15 +109,16 @@
 			class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 			on:click={() => handle('/assetmanager')}>Asset Manager</button
 		>
-		<button
-			on:click={() => handle('/tds')}
-			class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			>Trulioo Design Linter</button
-		>
+		
 		<button
 			on:click={() => handle('/accessibility')}
 			class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 			>Accessibility in the Design System</button
+		>
+		<button
+			on:click={() => handle('/tds')}
+			class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+			>Trulioo Design Linter</button
 		>
 	</div>
 	<p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
