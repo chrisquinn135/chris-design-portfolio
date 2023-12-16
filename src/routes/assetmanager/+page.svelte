@@ -77,7 +77,7 @@
 				<a
 					href="#launch"
 					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-					>Launch</a
+					>Final experience</a
 				>
 			</li>
 			<li>
@@ -567,7 +567,7 @@
 		<!-- Final designs section -->
 		<SectionLayout id="launch">
 			<div>
-				<h2 class="h1">07<br />Introducing the Asset Manager</h2>
+				<h2 class="h1">07<br />Final experience</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>
