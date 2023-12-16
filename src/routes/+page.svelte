@@ -54,6 +54,9 @@
 					<span class="text-sm font-bold text-text-default">Resume</span>
 				</a>
 			</span>
+			<div class="flex flex-col gap-2 text-sm text-text-subdued">
+				<p>Designed and developed by Christopher Su</p>
+			</div>
 		</div>
 	</section>
 
