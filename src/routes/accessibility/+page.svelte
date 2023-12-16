@@ -86,9 +86,10 @@
 		<div class="flex flex-col gap-4">
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
-				<h2 class={h3}>ACCESSIBILITY IN THE DESIGN SYSTEM</h2>
 			</div>
-			<h1 class={h1}>Introducing Accessibility into the Trulioo Design System</h1>
+			<h1 class="h1">Accessibility in the Design System</h1>
+			<h2 class="text-text-subdued text-lg sm:text-2xl">
+				Improving Accessibility Across Components and Design Patterns		</h2>
 		</div>
 		<img src={'/accessibility/hero.webp'} alt="hero" class='w-full'/>
 		<section class={section} id="overview">
@@ -107,8 +108,8 @@
 					<p class={label}>Overview</p>
 					<p class={body}>
 						The Trulioo Design System aims to meet <a
-							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover"
-							href="https://www.w3.org/TR/WCAG21/"
+						class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
+						href="https://www.w3.org/TR/WCAG21/"
 							target="_blank">WCAG 2.1 AA</a
 						>
 						compliance at minimum for all components. <br /><br />I led research and incorporation

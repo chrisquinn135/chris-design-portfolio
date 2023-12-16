@@ -3,7 +3,7 @@ export default {
     content: ['./src/**/*.{html,js,svelte,ts}'],
     theme: {
         colors: {
-            'action-interactive-default': '#128BA6',
+            'action-interactive-default': '#1274A5',
             'action-interactive-hover': '0E687D',
             'action-outline-default': '#ffffff00',
             'action-outline-disabled': '#ffffff00',
