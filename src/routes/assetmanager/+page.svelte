@@ -1,10 +1,11 @@
 <script>
 	import Card from '../../components/card.svelte';
 	import Footer from '../../components/footer.svelte';
-
+	import SectionLayout from '../../layouts/sectionLayout.svelte';
+	import ContainerLayout from '../../layouts/containerLayout.svelte';
+	import PageLayout from '../../layouts/pageLayout.svelte';
+	import NavigationLayout from '../../layouts/navigationLayout.svelte';
 	// font styles
-	let h1 = 'text-3xl sm:text-4xl font-bold';
-	let h2 = 'text-text-subdued text-lg sm:text-2xl';
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
@@ -19,9 +20,7 @@
 	let imgPad =
 		'p-2 pb-1 sm:p-8 sm:pb-4 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued';
 	// section styles
-	let section = 'flex flex-col gap-8 sm:gap-16';
 	let div = 'grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16';
-	let container = 'flex flex-col gap-4 sm:gap-8';
 </script>
 
 <svelte:head>
@@ -29,89 +28,86 @@
 </svelte:head>
 <!-- Body content -->
 
-<div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid3">
+<PageLayout>
 	<div class="hidden sm:block">
-		<section class="pt-6 pb-6 sm:pt-8 sm:pb-16 sticky top-0 flex flex-col justify-end h-screen">
-			<div class="flex flex-col gap-4 content-end">
-				<nav class={label}>CONTENTS</nav>
-				<ul class="flex flex-col gap-4 text-text-placeholder">
-					<li>
-						<a
-							href="#overview"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Overview</a
-						>
-					</li>
-					<li>
-						<a
-							href="#asset"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Platform audit</a
-						>
-					</li>
-					<li>
-						<a
-							href="#user"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Updating user journey</a
-						>
-					</li>
-					<li>
-						<a
-							href="#ideation"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Ideation</a
-						>
-					</li>
-					<li>
-						<a
-							href="#design"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Design iterations</a
-						>
-					</li>
-					<li>
-						<a
-							href="#dev"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Development</a
-						>
-					</li>
-					<li>
-						<a
-							href="#launch"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Launch</a
-						>
-					</li>
-					<li>
-						<a
-							href="#impact"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Impact</a
-						>
-					</li>
-					<li>
-						<a
-							href="#retrospection"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Retrospection</a
-						>
-					</li>
-				</ul>
-			</div>
-		</section>
+		<NavigationLayout>
+			<li>
+				<a
+					href="#overview"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Overview</a
+				>
+			</li>
+			<li>
+				<a
+					href="#asset"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Platform audit</a
+				>
+			</li>
+			<li>
+				<a
+					href="#user"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Updating user journey</a
+				>
+			</li>
+			<li>
+				<a
+					href="#ideation"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Ideation</a
+				>
+			</li>
+			<li>
+				<a
+					href="#design"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Design iterations</a
+				>
+			</li>
+			<li>
+				<a
+					href="#dev"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Development</a
+				>
+			</li>
+			<li>
+				<a
+					href="#launch"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Launch</a
+				>
+			</li>
+			<li>
+				<a
+					href="#impact"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Impact</a
+				>
+			</li>
+			<li>
+				<a
+					href="#retrospection"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Retrospection</a
+				>
+			</li>
+		</NavigationLayout>
 	</div>
 	<section class="flex flex-col gap-16 pt-6 pb-6 md:pt-8 md:pb-16" id="top">
 		<div class="flex flex-col gap-4">
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
 			</div>
-			<h1 class={h1}>Asset Manager — Custom Figma Plugin</h1>
-			<h2 class={h2}>Centralizing Assets for Improved Consistency Across the Platform</h2>
+			<h1 class="h1">Asset Manager — Custom Figma Plugin</h1>
+			<h2 class="text-text-subdued text-lg sm:text-2xl">
+				Centralizing Assets for Improved Consistency Across the Platform
+			</h2>
 		</div>
 		<img src={'/asset/hero.png'} alt="hero" class="rounded-lg w-full" />
-		<section class={section}>
+		<SectionLayout id="brief">
 			<div class={div}>
 				<div class="flex flex-col gap-8 sm:gap-16">
 					<div>
@@ -154,13 +150,13 @@
 				/>
 			</div>
 			<div class="bg-border-subdued w-full h-px" />
-		</section>
+		</SectionLayout>
 		<!-- problem section -->
-		<section class={section} id="overview">
+		<SectionLayout id="overview">
 			<div>
-				<h2 class={h1}>01<br />Overview</h2>
+				<h2 class="h1">01<br />Overview</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>The problem</h3>
 					<div class={body}>
@@ -181,8 +177,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>The goal</h3>
 					<div class={body}>
@@ -209,8 +205,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div> -->
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>My contribution</h3>
 					<div class={body}>
@@ -221,15 +217,15 @@
 						technical implementation of the tool from conception to launch.
 					</div>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px" />
-		</section>
+		</SectionLayout>
 		<!-- problem section -->
-		<section class={section} id="asset">
+		<SectionLayout id="asset">
 			<div>
-				<h2 class={h1}>02 <br />Tackling the core problem</h2>
+				<h2 class="h1">02 <br />Tackling the core problem</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>What we started with</h3>
 					<div class={body}>
@@ -257,8 +253,8 @@
 						<p class="text-xl text-text-subdued font-normal">Average variations</p>
 					</li>
 				</ul>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Creating an asset repository</h3>
 					<p class={body}>
@@ -281,15 +277,15 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- opportunity section -->
-		<section class={section} id="user">
+		<SectionLayout id="user">
 			<div>
-				<h2 class={h1}>03<br />Updating the journey</h2>
+				<h2 class="h1">03<br />Updating the journey</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Pinpointing the issues</h3>
 					<p class={body}>
@@ -310,8 +306,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Rethinking the user journey</h3>
 					<div class={body}>
@@ -328,15 +324,15 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 
-		<section class={section} id="ideation">
+		<SectionLayout id="ideation">
 			<div>
-				<h2 class={h1}>04<br />Landing on a solution</h2>
+				<h2 class="h1">04<br />Landing on a solution</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Selecting a tool</h3>
 					<div class={body}>
@@ -355,8 +351,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Feature definition</h3>
 					<div class={body}>
@@ -373,25 +369,25 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
+			</ContainerLayout>
 
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- Design iteration section -->
-		<section class={section} id="design">
+		<SectionLayout id="design">
 			<div>
-				<h2 class={h1}>05<br />Design iteration</h2>
+				<h2 class="h1">05<br />Design iteration</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Testing initial designs</h3>
 					<div class={body}>
-						Once the initial designs were complete, I ran moderated user tests with three designers and iterated
-						on the designs based on the gathered insights. 
+						Once the initial designs were complete, I ran moderated user tests with three designers
+						and iterated on the designs based on the gathered insights.
 					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Improving asset organization and searchability</h3>
 					<div class={body}>
@@ -409,8 +405,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Improving the asset insertion screen</h3>
 					<div class="flex flex-col gap-4">
@@ -462,15 +458,15 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- development section -->
-		<section class={section} id="dev">
+		<SectionLayout id="dev">
 			<div>
-				<h2 class={h1}>06<br />Development</h2>
+				<h2 class="h1">06<br />Development</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Diving into implementation</h3>
 					<div class={body}>
@@ -482,9 +478,9 @@
 						section to see the final designs and implementation.
 						<br /><br />
 						I lead development efforts for both the frontend (UI) and backend logic and collaborated
-						with developers on code best practices and implementation.<br/><br/>For this section, I'll focus mainly
-						on the component insertion logic, namely adding and swapping assets. If you'd like to learn
-						more, you can visit the
+						with developers on code best practices and implementation.<br /><br />For this section,
+						I'll focus mainly on the component insertion logic, namely adding and swapping assets.
+						If you'd like to learn more, you can visit the
 						<a
 							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
 							href="https://github.com/trulioo-visual-team/asset-finder"
@@ -498,8 +494,8 @@
 						> for more information!
 					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Keys, keys, keys</h3>
 					<div class={body}>
@@ -517,11 +513,11 @@
 					<img
 						src="/asset/json.png"
 						alt="Individual asset screen improvements"
-						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)] "
+						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>"Add asset" logic</h3>
 					<div class={body}>
@@ -541,8 +537,8 @@
 						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>"Swap asset" logic</h3>
 					<div class={body}>
@@ -565,31 +561,27 @@
 						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px" />
-		</section>
+		</SectionLayout>
 		<!-- Final designs section -->
-		<section class={section} id="launch">
+		<SectionLayout id="launch">
 			<div>
-				<h2 class={h1}>07<br />Introducing the Asset Manager</h2>
+				<h2 class="h1">07<br />Introducing the Asset Manager</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Centralized assets</h3>
+					<h3 class={h3}>Efficent organization</h3>
 					<div class={body}>
-						The asset manager offers a convenient organization of assets, categorizing them into two
-						distinct tabs: "Illustrations" and "Text." Under the "Illustrations" tab, users can
-						access illustrations and their associated text usages across the platform. Meanwhile,
-						the "Text" tab provides easy access to common text elements like dates of birth and
-						countries. <br /> <br />This organization streamlines asset retrieval, empowering users
-						to locate specific assets swiftly through efficient search, filtering, and sorting
-						functionalities.
+						The asset manager provides organization of assets under two tabs, "Illustrations" and
+						"Text", empowering users to locate specific assets swiftly through efficient search,
+						filtering, and sorting functionalities.
 					</div>
 				</div>
 				<div class={imgPad}>
-					<img src="/asset/filter-sort.png" alt="illustration assets" class="rounded-lg w-full" />
+					<img src="/asset/organization.png" alt="illustration assets" class="rounded-lg w-full" />
 				</div>
-				<div class={videoWrapper}>
+				<div class={img}>
 					<video
 						src="/asset/filter-sort.mp4"
 						type="video/mp4"
@@ -600,21 +592,32 @@
 						loop
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
+				<div class={div}>
+					<h3 class={h3}>Centralized Assets</h3>
+					<div class={body}>
+						The individual pages draw assets from the centralized repository, ensuring that users
+						are always using the most up-to-date illustrations and text.
+					</div>
+				</div>
+				<div class={imgPad}>
+					<img src="/asset/individual-view.png" alt="illustration assets" class="rounded-lg w-full" />
+				</div>
+
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Swap and add assets</h3>
 					<p class={body}>
-						Designers have the option to either swap or add individual assets directly onto canvas,
-						providing direct integration into the designer's workflow.<br /><br />Designers are also
-						able to swap entire groups of content for text assets.
+						Users have the option to either swap the current selection or add individual assets directly onto canvas,
+						providing direct integration into the user's workflow.
 					</p>
 				</div>
 				<div class={imgPad}>
-					<img src="/asset/swap-and-add.png" alt="illustration assets" class="rounded-lg w-full" />
+					<img src="/asset/export-single.png" alt="illustration assets" class="rounded-lg w-full" />
 				</div>
-
-				<div class={videoWrapper}>
+				<div class={img}>
 					<video
 						src="/asset/swap-ill-text.mp4"
 						type="video/mp4"
@@ -625,8 +628,18 @@
 						loop
 					/>
 				</div>
-
-				<div class={videoWrapper}>
+			</ContainerLayout>
+			<ContainerLayout>
+				<div class={div}>
+					<h3 class={h3}>Swap groups</h3>
+					<p class={body}>
+						For text assets, users have the option to swap entire groups of content at once rather than swapping out content individually. 
+					</p>
+				</div>
+				<div class={imgPad}>
+					<img src="/asset/export-double.png" alt="illustration assets" class="rounded-lg w-full" />
+				</div>
+				<div class={img}>
 					<video
 						src="/asset/swap-multiple-node.mp4"
 						type="video/mp4"
@@ -637,15 +650,16 @@
 						loop
 					/>
 				</div>
-			</div>
+
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- Impact section -->
-		<section class={section} id="impact">
+		<SectionLayout id="impact">
 			<div>
-				<h2 class={h1}>08<br />Impact and what's next</h2>
+				<h2 class="h1">08<br />Impact and what's next</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Shipped and integrated</h3>
 					<div class="flex flex-col gap-4">
@@ -667,8 +681,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Where are we going?</h3>
 					<div class="flex flex-col gap-4">
@@ -710,15 +724,15 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- Impact section -->
-		<section class={section} id="retrospection">
+		<SectionLayout id="retrospection">
 			<div>
-				<h2 class={h1}>09<br />Retrospection</h2>
+				<h2 class="h1">09<br />Retrospection</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>What I learned</h3>
 					<div class="flex flex-col gap-4">
@@ -739,9 +753,9 @@
 						</p>
 					</div>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<div class="flex flex-col gap-8">
 			<h2 class="text-2xl sm:text-4xl font-bold">Next project:</h2>
 			<Card
@@ -755,27 +769,9 @@
 		</div>
 		<Footer />
 	</section>
-
 	<div class="hidden sm:block">
 		<section
 			class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 sm:pt-8 sm:pb-16"
 		/>
 	</div>
-</div>
-
-<style>
-	.grid3 {
-		display: flex;
-		gap: 32px;
-		@media screen and (min-width: 640px) {
-			display: grid;
-			grid-template-columns: 2fr 6fr; /* 1/4, 5/8, 1/8 proportions */
-			gap: 32px;
-		}
-		@media screen and (min-width: 768px) {
-			display: grid;
-			gap: 32px;
-			grid-template-columns: 2fr 5fr 1fr; /* 1/4, 5/8, 1/8 proportions */
-		}
-	}
-</style>
+</PageLayout>
