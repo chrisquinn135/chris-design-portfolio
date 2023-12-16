@@ -22,7 +22,7 @@
 		isActive = false;
 	}
 
-	let y; 
+	let y;
 	function handle(url) {
 		if (url != $page.route.id) {
 			$destination = url;
@@ -44,7 +44,7 @@
 	<Curtain />
 {/if}
 {#if y > 500}
-	<ScrollTop/>
+	<ScrollTop />
 {/if}
 
 <!-- MOBILE NAV -->
@@ -60,7 +60,7 @@
 		<Logo inverse={true} />
 	</button>
 	<div class="flex flex-row gap-4">
-		<div class=" bg-surface-0 w-0.5 h-full text-text-inverse"/>
+		<div class=" bg-surface-0 w-0.5 h-full text-text-inverse" />
 		<button tabindex="0" on:keypress={handleNav} class="h-11" on:click={handleNav}>
 			<InverseMenu inverse={isActive} />
 		</button>
@@ -89,42 +89,40 @@
 </div>
 
 {#if isActive}
-
-<nav
-	transition:fly={{duration:300,y:'-100vh'}}
-	
-	class={'px-8 sm:px-8 lg:px-16 py-8 bg-surface-inverse z-20 fixed h-screen w-screen'}
->
-	<div
-		class={isActive
-			? 'block flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'
-			: ' hidden flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'}
-		data-sveltekit-preload-data="hover"
+	<nav
+		transition:fly={{ duration: 300, y: '-100vh' }}
+		class={'px-8 sm:px-8 lg:px-16 py-8 bg-surface-inverse z-20 fixed h-screen w-screen'}
 	>
-	<button
-			class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			on:click={() => handle('/about')}>About</button
-		>	
-	<button
-			class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			on:click={() => handle('/assetmanager')}>Asset Manager</button
+		<div
+			class={isActive
+				? 'block flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'
+				: ' hidden flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'}
+			data-sveltekit-preload-data="hover"
 		>
-		
-		<button
-			on:click={() => handle('/accessibility')}
-			class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			>Accessibility in the Design System</button
-		>
-		<button
-			on:click={() => handle('/tds')}
-			class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-			>Trulioo Design Linter</button
-		>
-	</div>
-	<p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
-		Designed and developed by Christopher Su
-	</p>
-</nav>
+			<button
+				class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				on:click={() => handle('/about')}>About</button
+			>
+			<button
+				class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				on:click={() => handle('/assetmanager')}>Asset Manager</button
+			>
+
+			<button
+				on:click={() => handle('/accessibility')}
+				class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				>Accessibility in the Design System</button
+			>
+			<button
+				on:click={() => handle('/tds')}
+				class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				>Trulioo Design Linter</button
+			>
+		</div>
+		<p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
+			Designed and developed by Christopher Su
+		</p>
+	</nav>
 {/if}
 <slot />
 

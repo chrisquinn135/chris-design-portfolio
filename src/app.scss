@@ -5,18 +5,44 @@
 
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 body {
-    background-image: url(https://www.kamaboko.com/fishprotein/wp-content/themes/labo/img/bg/backgound.png);
+    background-image: url('https://www.kamaboko.com/fishprotein/wp-content/themes/labo/img/bg/backgound.png');
     background-size: 128px 256px;
-    height:100vh;
+    height: 100vh;
     // padding: $xl;
     font-family: 'Inter Tight', sans-serif;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Raleway', sans-serif;
 }
 
-html, body {
+.h1 {
+    color: #121212;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    @include mobile {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}
+
+.h3 {
+    color: #121212;
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+    @include mobile {
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.75rem; /* 28px */
+    }
+}
+
+html,
+body {
     scroll-behavior: smooth;
 }
 

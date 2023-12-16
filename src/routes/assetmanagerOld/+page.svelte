@@ -1,10 +1,7 @@
 <script>
 	import Card from '../../components/card.svelte';
 	import Footer from '../../components/footer.svelte';
-	import SectionLayout from '../../layouts/sectionLayout.svelte';
-	import ContainerLayout from '../../layouts/containerLayout.svelte';
-	import PageLayout from '../../layouts/pageLayout.svelte';
-	import NavigationLayout from '../../layouts/navigationLayout.svelte';
+
 	// font styles
 	let h1 = 'text-3xl sm:text-4xl font-bold';
 	let h2 = 'text-text-subdued text-lg sm:text-2xl';
@@ -22,7 +19,9 @@
 	let imgPad =
 		'p-2 pb-1 sm:p-8 sm:pb-4 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued';
 	// section styles
+	let section = 'flex flex-col gap-8 sm:gap-16';
 	let div = 'grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16';
+	let container = 'flex flex-col gap-4 sm:gap-8';
 </script>
 
 <svelte:head>
@@ -30,73 +29,78 @@
 </svelte:head>
 <!-- Body content -->
 
-<PageLayout>
+<div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid3">
 	<div class="hidden sm:block">
-		<NavigationLayout>
-				<li>
-					<a
-						href="#overview"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Overview</a
-					>
-				</li>
-				<li>
-					<a
-						href="#asset"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Platform audit</a
-					>
-				</li>
-				<li>
-					<a
-						href="#user"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Updating user journey</a
-					>
-				</li>
-				<li>
-					<a
-						href="#ideation"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Ideation</a
-					>
-				</li>
-				<li>
-					<a
-						href="#design"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Design iterations</a
-					>
-				</li>
-				<li>
-					<a
-						href="#dev"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Development</a
-					>
-				</li>
-				<li>
-					<a
-						href="#launch"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Launch</a
-					>
-				</li>
-				<li>
-					<a
-						href="#impact"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Impact</a
-					>
-				</li>
-				<li>
-					<a
-						href="#retrospection"
-						class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-						>Retrospection</a
-					>
-				</li>
-		</NavigationLayout>
+		<section class="pt-6 pb-6 sm:pt-8 sm:pb-16 sticky top-0 flex flex-col justify-end h-screen">
+			<div class="flex flex-col gap-4 content-end">
+				<nav class={label}>CONTENTS</nav>
+				<ul class="flex flex-col gap-4 text-text-placeholder">
+					<li>
+						<a
+							href="#overview"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Overview</a
+						>
+					</li>
+					<li>
+						<a
+							href="#asset"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Platform audit</a
+						>
+					</li>
+					<li>
+						<a
+							href="#user"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Updating user journey</a
+						>
+					</li>
+					<li>
+						<a
+							href="#ideation"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Ideation</a
+						>
+					</li>
+					<li>
+						<a
+							href="#design"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Design iterations</a
+						>
+					</li>
+					<li>
+						<a
+							href="#dev"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Development</a
+						>
+					</li>
+					<li>
+						<a
+							href="#launch"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Launch</a
+						>
+					</li>
+					<li>
+						<a
+							href="#impact"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Impact</a
+						>
+					</li>
+					<li>
+						<a
+							href="#retrospection"
+							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+							>Retrospection</a
+						>
+					</li>
+				</ul>
+			</div>
+		</section>
 	</div>
 	<section class="flex flex-col gap-16 pt-6 pb-6 md:pt-8 md:pb-16" id="top">
 		<div class="flex flex-col gap-4">
@@ -107,7 +111,7 @@
 			<h2 class={h2}>Centralizing Assets for Improved Consistency Across the Platform</h2>
 		</div>
 		<img src={'/asset/hero.png'} alt="hero" class="rounded-lg w-full" />
-		<SectionLayout id="brief">
+		<section class={section}>
 			<div class={div}>
 				<div class="flex flex-col gap-8 sm:gap-16">
 					<div>
@@ -150,13 +154,13 @@
 				/>
 			</div>
 			<div class="bg-border-subdued w-full h-px" />
-		</SectionLayout>
+		</section>
 		<!-- problem section -->
-		<SectionLayout id="overview">
+		<section class={section} id="overview">
 			<div>
 				<h2 class={h1}>01<br />Overview</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>The problem</h3>
 					<div class={body}>
@@ -177,8 +181,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>The goal</h3>
 					<div class={body}>
@@ -205,8 +209,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div> -->
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>My contribution</h3>
 					<div class={body}>
@@ -217,15 +221,15 @@
 						technical implementation of the tool from conception to launch.
 					</div>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px" />
-		</SectionLayout>
+		</section>
 		<!-- problem section -->
-		<SectionLayout id="asset">
+		<section class={section} id="asset">
 			<div>
 				<h2 class={h1}>02 <br />Tackling the core problem</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>What we started with</h3>
 					<div class={body}>
@@ -253,8 +257,8 @@
 						<p class="text-xl text-text-subdued font-normal">Average variations</p>
 					</li>
 				</ul>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Creating an asset repository</h3>
 					<p class={body}>
@@ -277,15 +281,15 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 		<!-- opportunity section -->
-		<SectionLayout id="user">
+		<section class={section} id="user">
 			<div>
 				<h2 class={h1}>03<br />Updating the journey</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Pinpointing the issues</h3>
 					<p class={body}>
@@ -306,8 +310,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Rethinking the user journey</h3>
 					<div class={body}>
@@ -324,15 +328,15 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 
-		<SectionLayout id="ideation">
+		<section class={section} id="ideation">
 			<div>
 				<h2 class={h1}>04<br />Landing on a solution</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Selecting a tool</h3>
 					<div class={body}>
@@ -351,8 +355,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Feature definition</h3>
 					<div class={body}>
@@ -369,25 +373,25 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
+			</div>
 
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 		<!-- Design iteration section -->
-		<SectionLayout id="design">
+		<section class={section} id="design">
 			<div>
 				<h2 class={h1}>05<br />Design iteration</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Testing initial designs</h3>
 					<div class={body}>
-						Once the initial designs were complete, I ran moderated user tests with three designers
-						and iterated on the designs based on the gathered insights.
+						Once the initial designs were complete, I ran moderated user tests with three designers and iterated
+						on the designs based on the gathered insights. 
 					</div>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Improving asset organization and searchability</h3>
 					<div class={body}>
@@ -405,8 +409,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Improving the asset insertion screen</h3>
 					<div class="flex flex-col gap-4">
@@ -458,15 +462,15 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 		<!-- development section -->
-		<SectionLayout id="dev">
+		<section class={section} id="dev">
 			<div>
 				<h2 class={h1}>06<br />Development</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Diving into implementation</h3>
 					<div class={body}>
@@ -478,9 +482,9 @@
 						section to see the final designs and implementation.
 						<br /><br />
 						I lead development efforts for both the frontend (UI) and backend logic and collaborated
-						with developers on code best practices and implementation.<br /><br />For this section,
-						I'll focus mainly on the component insertion logic, namely adding and swapping assets.
-						If you'd like to learn more, you can visit the
+						with developers on code best practices and implementation.<br/><br/>For this section, I'll focus mainly
+						on the component insertion logic, namely adding and swapping assets. If you'd like to learn
+						more, you can visit the
 						<a
 							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
 							href="https://github.com/trulioo-visual-team/asset-finder"
@@ -494,8 +498,8 @@
 						> for more information!
 					</div>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Keys, keys, keys</h3>
 					<div class={body}>
@@ -513,11 +517,11 @@
 					<img
 						src="/asset/json.png"
 						alt="Individual asset screen improvements"
-						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
+						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)] "
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>"Add asset" logic</h3>
 					<div class={body}>
@@ -537,8 +541,8 @@
 						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>"Swap asset" logic</h3>
 					<div class={body}>
@@ -561,15 +565,15 @@
 						class="rounded-lg w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)]"
 					/>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px" />
-		</SectionLayout>
+		</section>
 		<!-- Final designs section -->
-		<SectionLayout id="launch">
+		<section class={section} id="launch">
 			<div>
 				<h2 class={h1}>07<br />Introducing the Asset Manager</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Centralized assets</h3>
 					<div class={body}>
@@ -596,8 +600,8 @@
 						loop
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Swap and add assets</h3>
 					<p class={body}>
@@ -633,15 +637,15 @@
 						loop
 					/>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 		<!-- Impact section -->
-		<SectionLayout id="impact">
+		<section class={section} id="impact">
 			<div>
 				<h2 class={h1}>08<br />Impact and what's next</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Shipped and integrated</h3>
 					<div class="flex flex-col gap-4">
@@ -663,8 +667,8 @@
 						class="rounded-lg w-full"
 					/>
 				</div>
-			</ContainerLayout>
-			<ContainerLayout>
+			</div>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>Where are we going?</h3>
 					<div class="flex flex-col gap-4">
@@ -706,15 +710,15 @@
 						</div>
 					</div>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 		<!-- Impact section -->
-		<SectionLayout id="retrospection">
+		<section class={section} id="retrospection">
 			<div>
 				<h2 class={h1}>09<br />Retrospection</h2>
 			</div>
-			<ContainerLayout>
+			<div class={container}>
 				<div class={div}>
 					<h3 class={h3}>What I learned</h3>
 					<div class="flex flex-col gap-4">
@@ -735,9 +739,9 @@
 						</p>
 					</div>
 				</div>
-			</ContainerLayout>
+			</div>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
+		</section>
 		<div class="flex flex-col gap-8">
 			<h2 class="text-2xl sm:text-4xl font-bold">Next project:</h2>
 			<Card
@@ -751,9 +755,27 @@
 		</div>
 		<Footer />
 	</section>
+
 	<div class="hidden sm:block">
 		<section
 			class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 sm:pt-8 sm:pb-16"
 		/>
 	</div>
-</PageLayout>
+</div>
+
+<style>
+	.grid3 {
+		display: flex;
+		gap: 32px;
+		@media screen and (min-width: 640px) {
+			display: grid;
+			grid-template-columns: 2fr 6fr; /* 1/4, 5/8, 1/8 proportions */
+			gap: 32px;
+		}
+		@media screen and (min-width: 768px) {
+			display: grid;
+			gap: 32px;
+			grid-template-columns: 2fr 5fr 1fr; /* 1/4, 5/8, 1/8 proportions */
+		}
+	}
+</style>
