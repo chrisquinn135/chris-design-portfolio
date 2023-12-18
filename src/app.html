@@ -11,8 +11,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter+Tight:wght@300;400;500;700&family=Inter:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
+        
         %sveltekit.head%
     </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2J0RHDRF33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2J0RHDRF33');
+</script>
     <body data-sveltekit-preload-data="hover">
         <script src="/src/prism.js"></script>
         <div style="display: contents">%sveltekit.body%</div>
