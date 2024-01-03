@@ -150,7 +150,7 @@
 			</div>
 		</div>
 		<div class="bg-border-subdued w-full h-px gap-2" />
-		<div class="flex flex-col gap-16">
+		<div class="flex flex-col gap-16" id='experience'>
 			<div>
 				<h2 class={h1}>Experience</h2>
 			</div>

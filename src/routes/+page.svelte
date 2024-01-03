@@ -66,7 +66,7 @@
 		<div class="flex flex-col gap-y-16" data-sveltekit-preload-data="hover">
 			<Card
 			title={'Asset Manager — Custom Figma Plugin'}
-			desc={'Centralizing Assets for Improved Consistency Across the Platform'}
+			desc={'A Custom Tool for Consistent Assets Across the Platform'}
 				slug="/asset-hero.avif"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
@@ -76,7 +76,7 @@
 			<div id="fold">
 				<Card
 				title={'Accessibility in the Design System'}
-				desc={'Improving Accessibility Across Components and Design Patterns'}
+				desc={'Redesigning Components to incorporate Accessible Design in Trulioo'}
 				slug="/acc-hero.avif"
 				t1={'Design System'}
 				t2={'Accessibility'}
