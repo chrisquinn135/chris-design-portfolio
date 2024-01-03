@@ -100,22 +100,22 @@
 			data-sveltekit-preload-data="hover"
 		>
 			<button
-				class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 				on:click={() => handle('/about')}>About</button
 			>
 			<button
-				class="text-left cursor-pointer hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 				on:click={() => handle('/assetmanager')}>Asset Manager</button
 			>
 
 			<button
 				on:click={() => handle('/accessibility')}
-				class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				class="text-left sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 				>Accessibility in the Design System</button
 			>
 			<button
 				on:click={() => handle('/tds')}
-				class="text-left hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				class="text-left sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 				>Trulioo Design Linter</button
 			>
 		</div>

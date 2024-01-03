@@ -42,21 +42,14 @@
 				<a
 					href="#asset"
 					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-					>Platform audit</a
-				>
-			</li>
-			<li>
-				<a
-					href="#user"
-					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-					>Updating user journey</a
+					>Research</a
 				>
 			</li>
 			<li>
 				<a
 					href="#ideation"
 					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-					>Ideation</a
+					>Core issues</a
 				>
 			</li>
 			<li>
@@ -103,7 +96,7 @@
 			</div>
 			<h1 class="h1">Asset Manager — Custom Figma Plugin</h1>
 			<h2 class="text-text-subdued text-lg sm:text-2xl">
-				Centralizing Assets for Improved Consistency Across the Platform
+				A Custom Tool for Consistent Assets Across the Platform
 			</h2>
 		</div>
 		<img src={'/asset/hero.png'} alt="hero" class="rounded-lg w-full" />
@@ -111,21 +104,31 @@
 			<div class={div}>
 				<div class="flex flex-col gap-8 sm:gap-16">
 					<div>
-						<p class={label}>My Role</p>
-						<p class={body}>Lead Designer and Developer</p>
-					</div>
-					<div>
 						<p class={label}>Timeline</p>
 						<p class={body}>August 2023 - October 2023</p>
 					</div>
+					<div>
+						<p class={label}>Skills</p>
+						<div class={body} >
+						<p>Product design</p>
+						<p>Design tools</p>
+						<p>Interaction design</p>
+						<p>Figma Plugin APIs</p>
+						
+						</div>
+					</div>
 				</div>
+
 				<div>
 					<p class={label}>Summary</p>
 					<p class={body}>
 						Asset Manager is a Figma plugin that stores assets such as illustrations and data used
 						within the Trulioo Platform for quick access and input.
-						<br /><br />Asset Manager is currently launched within the design organization and has a
-						100% adoption rate within daily design workflows.
+						<br /><br />
+						I led both the design and development efforts for this project, collaborating daily with
+						leadership and the design team to ensure product fit. I conducted audits, facilitated workshops
+						and led the visual, interaction and user flow tracks all while leading the technical implementation
+						of the tool from conception to launch.
 					</p>
 				</div>
 			</div>
@@ -182,9 +185,8 @@
 				<div class={div}>
 					<h3 class={h3}>The goal</h3>
 					<div class={body}>
-						Create a design tool that integrates directly with an asset repository, ensuring a
-						unified asset experience across the platform. Assets include illustrations and reusable
-						text throughout the platform.
+						Ensure a unified asset experience across the platform. Assets include illustrations and
+						reusable text throughout the platform.
 					</div>
 				</div>
 				<div
@@ -206,24 +208,12 @@
 					/>
 				</div> -->
 			</ContainerLayout>
-			<ContainerLayout>
-				<div class={div}>
-					<h3 class={h3}>My contribution</h3>
-					<div class={body}>
-						After championing and gaining support for the creation of a design tool, I led both the
-						design and development efforts for this project, collaborating daily with leadership and
-						the design team to ensure product fit. <br /><br />I conducted audits, facilitated
-						workshops and led the visual, interaction and user flow tracks all while leading the
-						technical implementation of the tool from conception to launch.
-					</div>
-				</div>
-			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px" />
 		</SectionLayout>
 		<!-- problem section -->
 		<SectionLayout id="asset">
 			<div>
-				<h2 class="h1">02 <br />Tackling the core problem</h2>
+				<h2 class="h1">02 <br />Pinpointing the core problem</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>
@@ -256,38 +246,7 @@
 			</ContainerLayout>
 			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Creating an asset repository</h3>
-					<p class={body}>
-						To create a unified asset repository, I lead several workshops with our design team to
-						consolidate each inconsistent asset usage found in the audit, making sure that <span
-							class={label}
-							>each unique use case had a single set of illustration and text combinations</span
-						>.
-						<br />
-						<br />
-						Having established an asset repository, I was prepared to design and develop the tool for
-						managing and housing this repository.
-					</p>
-				</div>
-				<div class={img}>
-					<p>Consolidating similar use cases together</p>
-					<img
-						src="/asset/consolidation.png"
-						alt="Consolidating different asset combinations"
-						class="rounded-lg w-full"
-					/>
-				</div>
-			</ContainerLayout>
-			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
-		<!-- opportunity section -->
-		<SectionLayout id="user">
-			<div>
-				<h2 class="h1">03<br />Updating the journey</h2>
-			</div>
-			<ContainerLayout>
-				<div class={div}>
-					<h3 class={h3}>Pinpointing the issues</h3>
+					<h3 class={h3}>Analyzing the user journey</h3>
 					<p class={body}>
 						Structuring the user journey allowed me to identify the pain points in the asset
 						selection process.
@@ -307,13 +266,44 @@
 					/>
 				</div>
 			</ContainerLayout>
+			<div class="bg-border-subdued w-full h-px gap-2" />
+		</SectionLayout>
+		<!-- opportunity section -->
+		<SectionLayout id="ideation">
+			<div>
+				<h2 class="h1">03<br />Tackling the Backbone of the Project</h2>
+			</div>
+			<ContainerLayout>
+				<div class={div}>
+					<h3 class={h3}>Creating an asset repository</h3>
+					<p class={body}>
+						To create a unified asset repository, I lead several workshops with our design team to
+						consolidate each inconsistent asset usage found in the audit, making sure that <span
+							class={label}
+							>each unique use case had a single set of illustration and text combinations</span
+						>.
+						<br />
+						<br />
+						Having established an asset repository, I was prepared to create the tool for
+						managing and housing this repository.
+					</p>
+				</div>
+				<div class={img}>
+					<p>Consolidating similar use cases together</p>
+					<img
+						src="/asset/consolidation.png"
+						alt="Consolidating different asset combinations"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</ContainerLayout>
 			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Rethinking the user journey</h3>
 					<div class={body}>
-						By integrating a design tool into the user journey, we will be able to significantly
-						decrease the time investment necessary in addition to ensuring consistent asset usage.<br
-						/><br />
+						I addressed the issues found with the previous user journey by mapping out what the journey would look like with a design tool.<br/><br/>
+						By integrating a design tool into the user journey, we are able to significantly
+						decrease the time investment necessary in addition to ensuring consistent asset usage.
 					</div>
 				</div>
 				<div class={img}>
@@ -325,16 +315,9 @@
 					/>
 				</div>
 			</ContainerLayout>
-			<div class="bg-border-subdued w-full h-px gap-2" />
-		</SectionLayout>
-
-		<SectionLayout id="ideation">
-			<div>
-				<h2 class="h1">04<br />Landing on a solution</h2>
-			</div>
 			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Selecting a tool</h3>
+					<h3 class={h3}>Deciding on a tool</h3>
 					<div class={body}>
 						Several tools were suggested to house our asset repository, including tools like Google
 						Docs and custom Figma plugins.<br /><br />
@@ -352,31 +335,12 @@
 					/>
 				</div>
 			</ContainerLayout>
-			<ContainerLayout>
-				<div class={div}>
-					<h3 class={h3}>Feature definition</h3>
-					<div class={body}>
-						Several alignment sessions later, I was able to hammer out the list of features and
-						requirements to focus our attention on. <br /><br />
-						We boiled down the core functionality to focus on how a user can retrieve and insert specific
-						assets.
-					</div>
-				</div>
-				<div class={imgPad}>
-					<img
-						src="/asset/insert-retrieve.png"
-						alt="Consolidating different asset combinations"
-						class="rounded-lg w-full"
-					/>
-				</div>
-			</ContainerLayout>
-
 			<div class="bg-border-subdued w-full h-px gap-2" />
 		</SectionLayout>
 		<!-- Design iteration section -->
 		<SectionLayout id="design">
 			<div>
-				<h2 class="h1">05<br />Design iteration</h2>
+				<h2 class="h1">04<br />Design iteration</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>
@@ -464,7 +428,7 @@
 		<!-- development section -->
 		<SectionLayout id="dev">
 			<div>
-				<h2 class="h1">06<br />Development</h2>
+				<h2 class="h1">05<br />Development</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>
@@ -567,11 +531,11 @@
 		<!-- Final designs section -->
 		<SectionLayout id="launch">
 			<div>
-				<h2 class="h1">07<br />Final experience</h2>
+				<h2 class="h1">06<br />Final experience</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Efficent organization</h3>
+					<h3 class={h3}>Efficient organization</h3>
 					<div class={body}>
 						The asset manager provides organization of assets under two tabs, "Illustrations" and
 						"Text", empowering users to locate specific assets swiftly through efficient search,
@@ -602,16 +566,19 @@
 					</div>
 				</div>
 				<div class={imgPad}>
-					<img src="/asset/individual-view.png" alt="illustration assets" class="rounded-lg w-full" />
+					<img
+						src="/asset/individual-view.png"
+						alt="illustration assets"
+						class="rounded-lg w-full"
+					/>
 				</div>
-
 			</ContainerLayout>
 			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Swap and add assets</h3>
 					<p class={body}>
-						Users have the option to either swap the current selection or add individual assets directly onto canvas,
-						providing direct integration into the user's workflow.
+						Users have the option to either swap the current selection or add individual assets
+						directly onto canvas, providing direct integration into the user's workflow.
 					</p>
 				</div>
 				<div class={imgPad}>
@@ -633,7 +600,8 @@
 				<div class={div}>
 					<h3 class={h3}>Swap groups</h3>
 					<p class={body}>
-						For text assets, users have the option to swap entire groups of content at once rather than swapping out content individually. 
+						For text assets, users have the option to swap entire groups of content at once rather
+						than swapping out content individually.
 					</p>
 				</div>
 				<div class={imgPad}>
@@ -650,14 +618,13 @@
 						loop
 					/>
 				</div>
-
 			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
 		</SectionLayout>
 		<!-- Impact section -->
 		<SectionLayout id="impact">
 			<div>
-				<h2 class="h1">08<br />Impact and what's next</h2>
+				<h2 class="h1">07<br />Impact and what's next</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>
@@ -730,7 +697,7 @@
 		<!-- Impact section -->
 		<SectionLayout id="retrospection">
 			<div>
-				<h2 class="h1">09<br />Retrospection</h2>
+				<h2 class="h1">08<br />Retrospection</h2>
 			</div>
 			<ContainerLayout>
 				<div class={div}>

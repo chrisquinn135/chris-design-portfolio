@@ -89,7 +89,7 @@
 			</div>
 			<h1 class="h1">Accessibility in the Design System</h1>
 			<h2 class="text-text-subdued text-lg sm:text-2xl">
-				Improving Accessibility Across Components and Design Patterns		</h2>
+				Redesigning Components to incorporate Accessible Design in Trulioo		</h2>
 		</div>
 		<img src={'/accessibility/hero.webp'} alt="hero" class='w-full'/>
 		<section class={section} id="overview">
@@ -203,7 +203,7 @@
 			</div>
 			<div class={container}>
 				<div class={div}>
-					<h3 class={h3}>Categrozing improvement areas</h3>
+					<h3 class={h3}>Categorizing improvement areas</h3>
 					<div class="flex flex-col gap-4">
 						<p class={body}>
 							I prioritized key improvement areas into <span class={label}
