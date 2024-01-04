@@ -9,8 +9,6 @@
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
-	let numfoot = 'text-text-default text-sm font-bold';
-	let footer = 'text-text-subdued text-sm font-light';
 	// content styles
 	// content styles
 	let videoWrapper =
