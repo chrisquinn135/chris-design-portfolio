@@ -1,85 +1,87 @@
 <script>
 	import Card from '../../components/card.svelte';
 	import Footer from '../../components/footer.svelte';
+	import SectionLayout from '../../layouts/sectionLayout.svelte';
+	import ContainerLayout from '../../layouts/containerLayout.svelte';
+	import PageLayout from '../../layouts/pageLayout.svelte';
+	import NavigationLayout from '../../layouts/navigationLayout.svelte';
 	// font styles
-	let h1 = 'text-3xl sm:text-4xl font-bold';
-	let h2 = 'text-text-subdued text-lg sm:text-2xl';
 	let h3 = 'text-text-default text-lg font-bold sm:text-2xl';
 	let label = 'text-text-default font-bold text-base';
 	let body = 'text-text-subdued text-base font-light';
 	let numfoot = 'text-text-default text-sm font-bold';
 	let footer = 'text-text-subdued text-sm font-light';
 	// content styles
-	let video = 'p-2 sm:p-8 bg-surface-+1 rounded-lg';
+	// content styles
+	let videoWrapper =
+		'p-2 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-text-subdued gap-8 font-light border border-border-subdued';
+	let video = 'w-full shadow-[0_20px_40px_-12px_rgba(50,50,93,0.25)] rounded-lg';
+	let img =
+		'p-2 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued';
+	// 'p-2 sm:p-8 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-text-subdued gap-8 font-light border border-2 border-text-default shadow-[0_3px_0_0_rgba(0,0,0,1)]';
+	let imgPad =
+		'p-2 pb-1 sm:p-8 sm:pb-4 bg-surface-+1 rounded-lg flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light border border-border-subdued';
 	// section styles
-	let section = 'flex flex-col gap-8 sm:gap-16';
 	let div = 'grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16';
-	let container = 'flex flex-col gap-4 sm:gap-8';
-
-
 </script>
+
 <svelte:head>
-    <title>Christopher Su — Accessibility in the Design System</title> 
+	<title>Christopher Su — Accessibility in the Design System</title>
 </svelte:head>
 <!-- Body content -->
-<div class="px-6 pb-24 sm:pb-0 sm:px-8 lg:px-16 grid3">
+<PageLayout>
 	<div class="hidden sm:block">
-		<section class="pt-6 pb-6 sm:pt-8 sm:pb-16 sticky top-0 flex flex-col justify-end h-screen">
-			<div class="flex flex-col gap-4 content-end">
-				<nav class={label}>CONTENTS</nav>
-				<ul class="flex flex-col gap-4 text-text-placeholder">
-					<li>
-						<a
-							href="#overview"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Overview</a
-						>
-					</li>
-					<li>
-						<a
-							href="#problem"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Problem space</a
-						>
-					</li>
-					<li>
-						<a
-							href="#audit"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Audit</a
-						>
-					</li>
-					<li>
-						<a
-							href="#opportunity"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Opportunity points</a
-						>
-					</li>
-					<li>
-						<a
-							href="#win"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Quick wins</a
-						>
-					</li>
-					<li>
-						<a
-							href="#wcag"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>WCAG 2.1 compliance</a
-						>
-					</li>
-					<li>
-						<a
-							href="#impact"
-							class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
-							>Impact</a
-						>
-					</li>
-				</ul>
-			</div>
-		</section>
+		<NavigationLayout>
+			<li>
+				<a
+					href="#overview"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Overview</a
+				>
+			</li>
+			<li>
+				<a
+					href="#audit"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Audit</a
+				>
+			</li>
+			<li>
+				<a
+					href="#opportunity"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Strategy</a
+				>
+			</li>
+			<li>
+				<a
+					href="#win"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Sprint one</a
+				>
+			</li>
+			<li>
+				<a
+					href="#wcag"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Sprint two</a
+				>
+			</li>
+			<li>
+				<a
+					href="#impact"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Impact</a
+				>
+			</li>
+			<li>
+				<a
+					href="#retro"
+					class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default"
+					>Retrospection</a
+				>
+			</li>
+		</NavigationLayout>
 	</div>
 
 	<section id="top" class="flex flex-col gap-16 pt-6 pb-6 md:pt-8 md:pb-16">
@@ -89,46 +91,50 @@
 			</div>
 			<h1 class="h1">Accessibility in the Design System</h1>
 			<h2 class="text-text-subdued text-lg sm:text-2xl">
-				Redesigning Components to incorporate Accessible Design in Trulioo		</h2>
+				Redesigning Components to Incorporate Accessible Design in Trulioo
+			</h2>
 		</div>
-		<img src={'/accessibility/hero.webp'} alt="hero" class='w-full'/>
-		<section class={section} id="overview">
+		<img src={'/accessibility/hero.webp'} alt="hero" class="w-full" />
+		<SectionLayout id="brief">
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16">
 				<div class="flex flex-col gap-8 sm:gap-16">
-					<div>
-						<p class={label}>My Role</p>
-						<p class={body}>Product designer</p>
-					</div>
 					<div>
 						<p class={label}>Timeline</p>
 						<p class={body}>May 2023 - August 2023</p>
 					</div>
+					<div>
+						<p class={label}>Skills</p>
+						<div class={body}>
+							<p>Accessibility</p>
+							<p>Design systems</p>
+							<p>Design strategy</p>
+						</div>
+					</div>
 				</div>
 				<div>
-					<p class={label}>Overview</p>
+					<p class={label}>Summary</p>
 					<p class={body}>
 						The Trulioo Design System aims to meet <a
-						class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
-						href="https://www.w3.org/TR/WCAG21/"
+							class="text-action-interactive-default text-blue-50 hover:text-action-interactive-hover underline"
+							href="https://www.w3.org/TR/WCAG21/"
 							target="_blank">WCAG 2.1 AA</a
 						>
-						compliance at minimum for all components. <br /><br />I led research and incorporation
-						of accessibility compliance into the design system, reshaped the handoff process to
-						incorporate accessibility compliance and led workshops to support and educate the design
-						and development teams about the importance and implementation of accessible design.
+						compliance at minimum for all components. <br /><br />I was the driver for accessibility
+						for our design system and led research and implementation of accessibility compliance
+						into the design system.
 					</p>
 				</div>
 			</div>
 			<div class="bg-border-subdued w-full h-px" />
-		</section>
+		</SectionLayout>
 		<!-- problem section -->
-		<section class={section} id="problem">
+		<SectionLayout id="overview">
 			<div>
-				<h2 class={h1}>01<br />Problem space</h2>
+				<h2 class="h1">01<br />Overview</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Current implementation</h3>
+					<h3 class={h3}>The problem</h3>
 					<div class={body}>
 						Trulioo is known as a global identity solutions expert, accurately verifying digital
 						identity around the world. Despite this, their platform does not provide adequate
@@ -136,8 +142,8 @@
 						leaving them open to potential accessibility-related lawsuits.
 					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>The goal</h3>
 					<div class={body}>
@@ -146,21 +152,19 @@
 						production.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
-					<img src="/accessibility/guideline.webp" alt="WCAG2.1 webpage" class="rounded-lg w-full" />
-					<div class="">
-						<span class={numfoot}>1.0 </span><span class={footer}>WCAG2.1 webpage</span>
-					</div>
+				<div class={videoWrapper}>
+					<p>WCAG2.1 guidelines</p>
+					<img src="/accessibility/wcag.webp" alt="WCAG2.1 webpage" class={video} />
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px" />
-		</section>
+		</SectionLayout>
 		<!-- exploration section -->
-		<section class={section} id="audit">
+		<SectionLayout id="audit">
 			<div>
-				<h2 class={h1}>02<br />Auditing the design system and platform</h2>
+				<h2 class="h1">02<br />Auditing the design system and platform</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>What we inherited</h3>
 					<div class={body}>
@@ -174,7 +178,7 @@
 					</div>
 				</div>
 				<ul
-					class="p-4 sm:p-8 bg-surface-+1 rounded-lg grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 justify-between p-16 text-2xl sm:text-4xl font-bold"
+					class="p-4 sm:p-8 bg-surface-+1 rounded-lg grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 justify-between p-16 text-2xl sm:text-4xl font-bold border border-border-subdued"
 				>
 					<li class="flex flex-col text-center gap-2">
 						<p>56%</p>
@@ -193,192 +197,232 @@
 						</p>
 					</li>
 				</ul>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- opportunity section -->
-		<section class={section} id="opportunity">
+		<SectionLayout id="opportunity">
 			<div>
-				<h2 class={h1}>03<br />Opportunity points</h2>
+				<h2 class="h1">03<br />Strategic Planning</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Categorizing improvement areas</h3>
+					<h3 class={h3}>Defining our north star</h3>
 					<div class="flex flex-col gap-4">
 						<p class={body}>
-							I prioritized key improvement areas into <span class={label}
-								>two stages based on perceived ease of implementation and immediate impact level.
-							</span>
+							Before any work was done on either the development or design-side, I collaborated with
+							stakeholders to determine key priorities as well as how we would measure the success
+							of the project.
+							<br /><br />
+							We came away from these discussions with two key insights:
 						</p>
 						<div
 							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
 						>
-							<p class={label}>Quick wins with immediate user impact</p>
-							<p class={body}>These include color contrast, interactive states, and target area.</p>
+							<p class={label}>Emphasis on user impact and high usage criteria</p>
+							<p class={body}>
+								Prioritization for accessibility categories will be based on perceived user impact
+								in addition to the amount of times users may use or interact with categories daily.
+							</p>
 						</div>
 						<div
 							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
 						>
 							<p class={label}>WCAG2.1 level AA compliance</p>
 							<p class={body}>
+								Success for this project will be measured by component compliance with the WCAG2.1
+								level AA guidelines.
+							</p>
+						</div>
+					</div>
+				</div>
+			</ContainerLayout>
+			<ContainerLayout>
+				<div class={div}>
+					<h3 class={h3}>Mapping out priorities</h3>
+					<div class="flex flex-col gap-4">
+						<p class={body}>
+							I analyzed the results of our platform audit and conducted research of
+							industry-standard design systems in order to determine which categories of
+							accessibility improvements to include within the initial accessibility improvements.
+							<br /><br />
+							Once the categories were finalized, I created a prioritization matrix and measured each
+							category by its potential user impact and usage rate daily.
+						</p>
+					</div>
+				</div>
+				<div class={videoWrapper}>
+					<p>Prioritization Matrix</p>
+					<img
+						src="/accessibility/matrix.webp"
+						alt="Implementation of color system"
+						class="rounded-lg w-full px-8"
+					/>
+				</div>
+			</ContainerLayout>
+			<ContainerLayout>
+				<div class={div}>
+					<h3 class={h3}>Creating a game plan</h3>
+					<div class="flex flex-col gap-4">
+						<p class={body}>
+							Once the categories were broken down by priority, I was able to divide the improvement
+							areas in two sprints.<br /><br />
+							This allowed me to focus my attention on fewer categories at one time, improving quality
+							of work in addition to gaining the ability to utilize any insights gained during sprint
+							one on sprint two!
+						</p>
+						<div
+							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
+						>
+							<p class={label}>Big wins with immediate user impact</p>
+							<p class={body}>These include color contrast, interactive states, and target area.</p>
+						</div>
+						<div
+							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
+						>
+							<p class={label}>Screen reader and keyboard functionalities</p>
+							<p class={body}>
 								These include keyboard traversal, focus order, and component markup.
 							</p>
 						</div>
 					</div>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- Design iteration section -->
-		<section class={section} id="win">
+		<SectionLayout id="win">
 			<div>
-				<h2 class={h1}>04<br />Quick wins with immediate user impact</h2>
+				<h2 class="h1">04<br />Big wins with immediate user impact</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Color contrast</h3>
 					<div class={body}>
 						Components have been updated to WCAG 2.1 level AA color contrast compliance in two
 						steps. <br /><br />First, I implemented a new color system that incorporated semantic
 						naming conventions. Each color was tested for accessibility compliance within its
-						specific use case (<span class={label}>Figure 4.0</span> and
-						<span class={label}>Figure 4.1</span>). <br /><br />Next, I attached the new color
-						system to every component, ensuring that all components complied with color contrast
-						accessibility.
+						specific use case. <br /><br />Next, I attached the new color system to every component,
+						ensuring that all components complied with color contrast accessibility.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
+				<div class={imgPad}>
+					<p>Implementation of color system</p>
 					<img
 						src="/accessibility/color-sys.webp"
 						alt="Implementation of color system"
 						class="rounded-lg w-full"
 					/>
-					<div class="">
-						<span class={numfoot}>4.0 </span><span class={footer}
-							>Implementation of color system</span
-						>
-					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
+				<div class={videoWrapper}>
+					<p>Contrast compliant components</p>
+
 					<img
-						src="/accessibility/contrast-compliant.webp"
+						src="/accessibility/contrast-compliant.png"
 						alt="Contrast compliant components"
-						class="rounded-lg w-full"
+						class="rounded-lg w-full px-8"
 					/>
-					<div class="">
-						<span class={numfoot}>4.1 </span><span class={footer}
-							>Contrast compliant components</span
-						>
-					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Interactive states</h3>
 					<div class={body}>
 						Existing interactive states for all interactive components have been expanded to
-						include, but not limited to, focus, hover, active and error states (<span class={label}
-							>Figure 4.2</span
-						>).<br /><br />
+						include, but not limited to, focus, hover, active and error states.<br /><br />
 						A notable change was the overhaul of our focus indicator to a two-color focus indicator.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
+				<div class={videoWrapper}>
+					<p>Focus state addition and modification</p>
 					<img
-						src="/accessibility/focus-state.webp"
+						src="/accessibility/focus-state.png"
 						alt="Focus state addition and modification"
-						class="rounded-lg w-full"
+						class="rounded-lg w-full px-8"
 					/>
-					<div class="">
-						<span class={numfoot}>4.2 </span><span class={footer}
-							>Focus state addition and modification</span
-						>
-					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Target area</h3>
 					<div class={body}>
 						I created in-depth documentation on how to incorporate proper target area size to adhere
-						to WCAG 2.1 level AA compliance (<span class={label}>Figure 4.3</span>).
+						to WCAG 2.1 level AA compliance.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
-					<img src="/accessibility/target-area.webp" alt="Button target area" class="rounded-lg w-full" />
-					<div class="">
-						<span class={numfoot}>4.3 </span><span class={footer}>Button target area</span>
-					</div>
+				<div class={videoWrapper}>
+					<p>Button target area</p>
+					<img
+						src="/accessibility/target-area.png"
+						alt="Button target area"
+						class="rounded-lg w-full px-8"
+					/>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<!-- development section -->
-		<section class={section} id="wcag">
+		<SectionLayout id="wcag">
 			<div>
-				<h2 class={h1}>05<br />WCAG 2.1 AA compliance</h2>
+				<h2 class="h1">05<br />Screen reader and keyboard functionalities</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Keyboard traversal</h3>
 					<div class={body}>
 						Component documentation now includes guidelines on all available keyboard traversal
 						options within a given component. Users can now navigate through components regardless
-						of disability or circumstance (<span class={label}>Figure 5.0</span>).
+						of disability or circumstance.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
+				<div class={videoWrapper}>
+					<p>Modal keyboard traversal guidelines</p>
 					<img
-						src="/accessibility/keyboard-traversal.webp"
+						src="/accessibility/keyboard-traversal.png"
 						alt="Modal keyboard traversal guidelines"
-						class="rounded-lg w-full"
+						class={video}
 					/>
-					<div class="">
-						<span class={numfoot}>5.0 </span><span class={footer}
-							>Modal keyboard traversal guidelines</span
-						>
-					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Focus order</h3>
 					<div class={body}>
 						Component documentation now includes guidelines on initial focus and focus order between
-						elements (<span class={label}>Figure 5.1</span>).
+						elements.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
-					<img src="/accessibility/focus-order.webp" alt="Modal focus order" class="rounded-lg w-full" />
-					<div class="">
-						<span class={numfoot}>5.0 </span><span class={footer}>Modal focus order</span>
-					</div>
+				<div class={videoWrapper}>
+					<p>Modal focus order</p>
+					<img
+						src="/accessibility/focus-order.webp"
+						alt="Modal focus order"
+						class="rounded-lg w-full"
+					/>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Component markup</h3>
 					<div class={body}>
 						Component documentation now includes guidelines on all required markup and ARIA tags.
 						Components are now accessible via screen readers and give additional context of content
-						they are reading (<span class={label}>Figure 5.2</span>).
+						they are reading.
 					</div>
 				</div>
-				<div class="flex flex-col gap-2 items-end">
-					<img src="/accessibility/markup.webp" alt="Dropdown markup" class="rounded-lg w-full" />
-					<div class="">
-						<span class={numfoot}>5.0 </span><span class={footer}>Dropdown markup</span>
-					</div>
+				<div class={videoWrapper}>
+					<p>Dropdown markup</p>
+					<img src="/accessibility/markup.png" alt="Dropdown markup" class="rounded-lg w-full" />
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px" />
-		</section>
+		</SectionLayout>
 		<!-- Impact section -->
-		<section class={section} id="impact">
+		<SectionLayout id="impact">
 			<div>
-				<h2 class={h1}>06<br />Impact and retrospection</h2>
+				<h2 class="h1">06<br />Impact and what's next</h2>
 			</div>
-			<div class={container}>
+			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Project impact</h3>
 					<div class="flex flex-col gap-4">
@@ -390,10 +434,46 @@
 						</p>
 					</div>
 				</div>
-			</div>
-			<div class={container}>
+			</ContainerLayout>
+			<ContainerLayout>
 				<div class={div}>
-					<h3 class={h3}>Retrospection</h3>
+					<h3 class={h3}>Next steps...</h3>
+					<div class="flex flex-col gap-4">
+						<p class={body}>
+							Here are a few things to look forward to in future steps:
+						</p>
+						<div
+							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
+						>
+							<p class={label}>Platform level accessible design</p>
+							<p class={body}>
+								While the initial implementation of accessible design was targeted on the component
+							level, future steps will target implementation on a product and platform level. This requires a lot of cross-functional team collaboration and is the next step on the horizon.
+							</p>
+						</div>
+						<div
+							class="flex flex-col gap-px px-4 py-2 rounded-lg border border-border-subdued bg-surface-0"
+						>
+							<p class={label}>Accessibility testing processes</p>
+							<p class={body}>
+								Currently, there are no provisions on accessibility testing within both designer and developer processes. A future project could be see the implementation of tools like <a href='https://storybook.js.org/addons/@storybook/addon-a11y' class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover" target='_blank'>storybook-addon-a11y
+								</a> within Storybook on the developer side or improved checks for accessibility on the designer side.
+							</p>
+						</div>
+					</div>
+				</div>
+			</ContainerLayout>
+
+			<div class="bg-border-subdued w-full h-px gap-2" />
+		</SectionLayout>
+		<!-- Impact section -->
+		<SectionLayout id="retro">
+			<div>
+				<h2 class="h1">07<br />Retrospection</h2>
+			</div>
+			<ContainerLayout>
+				<div class={div}>
+					<h3 class={h3}>What I learned</h3>
 					<div class="flex flex-col gap-4">
 						<p class={body}>
 							During this project, I've had the invaluable opportunity to expand my skill set and
@@ -404,21 +484,21 @@
 						</p>
 					</div>
 				</div>
-			</div>
+			</ContainerLayout>
 			<div class="bg-border-subdued w-full h-px gap-2" />
-		</section>
+		</SectionLayout>
 		<div class="flex flex-col gap-8">
 			<h2 class="text-2xl sm:text-4xl font-bold">Next project:</h2>
 			<Card
-				title={'Asset Manager'}
-				desc={'Centralizing Assets for Improved Consistency Across the Platform'}
+				title={'Asset Manager — Custom Figma Plugin'}
+				desc={'A Custom Tool for Consistent Assets Across the Platform'}
 				slug="/asset-hero.avif"
 				t1={'Product Design'}
 				t2={'Design Tooling'}
 				url={'/assetmanager'}
 			/>
 		</div>
-		<Footer/>
+		<Footer />
 	</section>
 
 	<div class="hidden sm:block">
@@ -426,7 +506,7 @@
 			class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 sm:pt-8 sm:pb-16"
 		/>
 	</div>
-</div>
+</PageLayout>
 
 <style>
 	.grid3 {
