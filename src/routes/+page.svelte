@@ -76,7 +76,7 @@
 			<div id="fold">
 				<Card
 				title={'Accessibility in the Design System'}
-				desc={'Redesigning Components to incorporate Accessible Design in Trulioo'}
+				desc={'Redesigning Components to Incorporate Accessible Design in Trulioo'}
 				slug="/acc-hero.avif"
 				t1={'Design System'}
 				t2={'Accessibility'}
