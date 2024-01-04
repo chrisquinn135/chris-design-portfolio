@@ -8,8 +8,8 @@
 
 <div
 	class='active px-16 py-8 bg-surface-inverse z-10 fixed h-screen w-screen z-99 flex justify-center items-center'
-    out:fly={{ delay: 700, duration: 400, y: '-100%', opacity: 1 }} 
-    in:fly={{ delay: 0, duration: 400, y: '-100%', opacity: 1 }}
+    out:fly={{ delay: 700, duration: 500, y: '-100%', opacity: 1 }} 
+    in:fly={{ delay: 0, duration: 500, y: '-100%', opacity: 1 }}
 > 
 
     <video src={$destination == '/assetmanager' ? "/curtain/blue.mp4" :
