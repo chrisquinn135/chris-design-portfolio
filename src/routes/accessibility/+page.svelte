@@ -87,10 +87,11 @@
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
 			</div>
-			<h1 class="h1">Accessibility in the Design System</h1>
-			<h2 class="text-text-subdued text-lg sm:text-2xl">
+			<p class="text-text-subdued text-base sm:text-xl font-light">ACCESSIBILITY IN THE DESIGN SYSTEM</p>
+			<h1 class="h1">
 				Redesigning Components to Incorporate Accessible Design in Trulioo
-			</h2>
+			</h1>
+			
 		</div>
 		<img src={'/accessibility/hero.webp'} alt="hero" class="w-full" />
 		<SectionLayout id="brief">
@@ -252,7 +253,7 @@
 				<div class={videoWrapper}>
 					<p>Prioritization Matrix</p>
 					<img
-						src="/accessibility/matrix.webp"
+						src="/accessibility/matrix.png"
 						alt="Implementation of color system"
 						class="rounded-lg w-full px-8"
 					/>
@@ -486,16 +487,25 @@
 			<div class="bg-border-subdued w-full h-px gap-2" />
 		</SectionLayout>
 		<div class="flex flex-col gap-8">
-			<h2 class="text-2xl sm:text-4xl font-bold">Next project:</h2>
-			<Card
-				title={'Asset Manager — Custom Figma Plugin'}
-				desc={'A Custom Tool for Consistent Assets Across the Platform'}
-				slug="/asset-hero.avif"
-				t1={'Product Design'}
-				t2={'Design Tooling'}
-				url={'/assetmanager'}
-			/>
-		</div>
+			<h2 class="text-2xl sm:text-4xl font-bold">Next projects:</h2>
+			
+			<div class="flex flex-col sm:flex-row gap-16 sm:gap-0">
+				<Card
+					title={'ASSET MANAGER — CUSTOM FIGMA PLUGIN'}
+					desc={'Creating a Custom Tool for Consistent Assets Across the Platform'}
+					slug="/assetsq.png"
+					url={'/assetmanager'}
+					key={['Figma Plugin APIs','Product design']}
+				/>
+				<Card
+					title={'TRULIOO — LINK LEADS MANAGER'}
+					desc={'Designing the link managment system to improve lead conversion'}
+					slug="/herolead.png"
+					url={'/trulioo'}
+					key={['Product design','Platform capabilities']}
+
+				/>
+			</div>
 		<Footer />
 	</section>
 

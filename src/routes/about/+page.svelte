@@ -1,5 +1,6 @@
 <script>
 	import Footer from '../../components/footer.svelte';
+	import PageLayout from '../../layouts/pageLayout.svelte';
 
 	// font styles
 	let h1 = 'text-3xl sm:text-4xl font-bold';
@@ -13,7 +14,7 @@
 </script>
 
 <!-- Body content -->
-<div class="px-6 md:px-8 lg:px-16 grid3">
+<PageLayout>
 	<div class="hidden sm:block">
 		<section class="pt-6 pb-6 md:pt-8 md:pb-16 sticky top-0 flex flex-col justify-end h-screen">
 			<div class="flex flex-col gap-4 content-end">
@@ -198,7 +199,7 @@
 			class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 md:pt-8 md:pb-16"
 		/>
 	</div>
-</div>
+</PageLayout>
 
 <style>
 	.grid3 {

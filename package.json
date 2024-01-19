@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"prismjs": "^1.29.0"
+		"prismjs": "^1.29.0",
+		"tailwindcss-opentype": "^1.1.0"
 	}
 }

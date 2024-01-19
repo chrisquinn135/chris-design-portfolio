@@ -503,16 +503,25 @@
 			<div class="bg-border-subdued w-full h-px gap-2" />
 		</section>
 		<div class="flex flex-col gap-8">
-			<h2 class="text-2xl sm:text-4xl font-bold">Next project:</h2>
+			<h2 class="text-2xl sm:text-4xl font-bold">Next projects:</h2>
+			
+			<div class='flex flex-row'>
+				<Card
+					title={'ASSET MANAGER — CUSTOM FIGMA PLUGIN'}
+					desc={'Creating a Custom Tool for Consistent Assets Across the Platform'}
+					slug="/assetsq.png"
+					url={'/assetmanager'}
+					key={['Figma Plugin APIs','Product design']}
+				/>
 			<Card
-				title={'Accessibility at Trulioo'}
-				desc={'Introducing Accessibility into the Trulioo Design System'}
-				slug="/acc-hero.avif"
-				t1={'Design System'}
-				t2={'Accessibility'}
-				url={'/accessibility'}
-			/>
-		</div>
+			title={'ACCESSIBILITY IN THE DESIGN SYSTEM'}
+			desc={'Redesigning Components to Incorporate Accessible Design'}
+			slug="/accsq.png"
+			url={'/accessibility'}
+			key={['Design systems','Accessibility']}
+
+		/>
+			</div>
 		<Footer/>
 	</section>
 

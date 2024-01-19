@@ -3,6 +3,8 @@
 	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
 	import Footer from '../components/footer.svelte';
+	import NavigationLayout from '../layouts/navigationLayout.svelte';
+	import PageLayout from '../layouts/pageLayout.svelte';
 
 	let top = false;
 	let yLocation = 0;
@@ -18,13 +20,15 @@
 		};
 	}
 </script>
+
 <svelte:head>
-    <title>Christopher Su</title> 
+	<title>Christopher Su</title>
 </svelte:head>
 <!-- body -->
-<div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid3">
-	<section
-		class="pt-6 pb-6 sm:pt-8 sm:pb-16 sm:sticky sm:top-0 flex flex-col justify-end sm:h-screen"
+<PageLayout>
+	<div class="hidden sm:block" />
+	<!-- <section
+		class="hidden sm:block pt-6 pb-6 sm:pt-8 sm:pb-16 sm:sticky sm:top-0 flex flex-col justify-end sm:h-screen"
 	>
 		<div class="flex flex-col gap-y-8 content-end pr-8">
 			<div class="hidden sm:block bg-text-default w-1/4 h-0.5" />
@@ -56,44 +60,87 @@
 			</span>
 				<p class="flex flex-col gap-2 text-sm text-text-subdued">Designed and developed by Christopher Su</p>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="flex flex-col gap-y-8 pt-6 pb-6 sm:pt-8 sm:pb-16" id="top">
-		<div class="flex flex-col gap-y-2">
+		<div class="flex flex-col gap-y-8 content-end pr-8">
+			<div
+				class="text-2xl leading-relaxed sm:text-base md:text-lg text-text-subdued gap-4 flex flex-col font-light"
+			>
+				<h1 class="text-3xl sm:text-4xl font-bold text-text-default !leading-normal">
+					Hi, I'm Christopher <span class="font-normal"
+						>— a product designer who can code, tackling complex products and solutions through systems and tools.
+					</span>
+				</h1>
+				<p class="text-text-subdued text-base md:text-lg font-light">
+					Currently at
+					<a
+						class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover"
+						href="https://www.trulioo.com/"
+						target="_blank">Trulioo</a
+					> working on design systems, internal tools and platform capabilities.
+				</p>
+			</div>
+			<!-- <span class="flex flex-row gap-6">
+				<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
+					<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
+				</a>
+				<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
+					<img src={'/github.png'} alt="logo" class="w-8" />
+				</a>
+				<a href="./christopher-su-resume.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
+					<span class="text-sm font-bold text-text-default">Resume</span>
+				</a>
+			</span>
+				<p class="flex flex-col gap-2 text-sm text-text-subdued">Designed and developed by Christopher Su</p> -->
+		</div>
+		<div class="flex flex-col gap-y-2 pt-8">
 			<div class="bg-text-default w-full h-0.5" />
 			<h1 class="text-xl font-bold">SELECTED WORK</h1>
 		</div>
-		<div class="flex flex-col gap-y-16" data-sveltekit-preload-data="hover">
-			<Card
-			title={'Asset Manager — Custom Figma Plugin'}
-			desc={'A Custom Tool for Consistent Assets Across the Platform'}
-				slug="/asset-hero.avif"
-				t1={'Product Design'}
-				t2={'Design Tooling'}
-				url={'/assetmanager'}
-			/>
+		<div class="grid sm:grid-cols-2 gap-y-16" data-sveltekit-preload-data="hover">
+			<div id="asset">
+				<Card
+					title={'ASSET MANAGER — CUSTOM FIGMA PLUGIN'}
+					desc={'Creating a Custom Tool for Consistent Assets Across the Platform'}
+					slug="/assetsq.png"
+					url={'/assetmanager'}
+					key={['Figma Plugin APIs','Product design']}
+				/>
+			</div>
 
 			<div id="fold">
 				<Card
-				title={'Accessibility in the Design System'}
-				desc={'Redesigning Components to Incorporate Accessible Design in Trulioo'}
-				slug="/acc-hero.avif"
-				t1={'Design System'}
-				t2={'Accessibility'}
-				url={'/accessibility'}
-			/>
-			</div>
-			<Card
-			title={'Trulioo Design Linter'}
-			desc={'Introducing Automation to the Design Review Process'}
-			slug="/tds-hero.avif"
-			t1={'Product Design'}
-			t2={'Design Tooling'}
-			url={'/tds'}
-		/>
+					title={'ACCESSIBILITY IN THE DESIGN SYSTEM'}
+					desc={'Redesigning Components to Incorporate Accessible Design'}
+					slug="/accsq.png"
+					url={'/accessibility'}
+					key={['Design systems','Accessibility']}
 
+				/>
+			</div>
+			<!-- <div id="tds">
+				<Card
+					title={'TRULIOO DESIGN LINTER'}
+					desc={'Introducing Automation to the Design Review Process'}
+					slug="/tdssq.png"
+					url={'/tds'}
+					key={['Product design','Design system']}
+
+				/>
+			</div> -->
+			<div id="tds">
+				<Card
+					title={'TRULIOO — LINK LEADS MANAGER'}
+					desc={'Designing the link managment system to improve lead conversion'}
+					slug="/herolead.png"
+					url={'/trulioo'}
+					key={['Product design','Platform capabilities']}
+
+				/>
+			</div>
 		</div>
-		<Footer/>
+		<Footer />
 	</section>
 	<div class="hidden sm:block">
 		<section
@@ -112,7 +159,7 @@
 			{/if}
 		</section>
 	</div>
-</div>
+</PageLayout>
 
 <style>
 	/* .active {

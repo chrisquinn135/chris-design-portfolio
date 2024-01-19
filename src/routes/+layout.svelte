@@ -105,7 +105,9 @@
 			>
 			<button
 				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-				on:click={() => handle('/assetmanager')}>Asset Manager</button
+				on:click={() => handle('/assetmanager')}>Asset Manager — Custom Figma Plugin
+
+				</button
 			>
 
 			<button
@@ -114,9 +116,9 @@
 				>Accessibility in the Design System</button
 			>
 			<button
-				on:click={() => handle('/tds')}
+				on:click={() => handle('/trulioo')}
 				class="text-left sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-				>Trulioo Design Linter</button
+				>Trulioo — Link Leads Manager</button
 			>
 		</div>
 		<p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">

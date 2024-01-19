@@ -14,7 +14,7 @@
 		@media screen and (min-width: 768px) {
 			display: grid;
 			gap: 32px;
-			grid-template-columns: 2fr 5fr 1fr; /* 1/4, 5/8, 1/8 proportions */
+			grid-template-columns: 1fr 4fr 1fr; /* 1/4, 5/8, 1/8 proportions */
 		}
 	}
 </style>
