@@ -94,7 +94,7 @@
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
 			</div>
-			<p class="all-small-caps text-text-subdued text-xl sm:text-2xl font-light">ASSET MANAGER — CUSTOM FIGMA PLUGIN</p>
+			<p class="text-text-subdued text-base sm:text-xl font-medium">ASSET MANAGER — CUSTOM FIGMA PLUGIN</p>
 			<h1 class="h1">
 				Creating a Custom Tool for Consistent Assets
 			</h1>
