@@ -33,12 +33,12 @@
 		/>
 	</div>
 	<div class="flex flex-col gap-2 items-start text-left pr-4">
-		<p class="all-small-caps text-text-subdued text-lg font-light">
+		<p class="all-small-caps text-text-subdued text-lg font-medium">
 			{title}
 		</p>
 		
 		<h3 class={h2}><span class='text-container'>{desc}</span></h3>
-		<div class="text-text-subdued text-xs md:text-xs font-light">
+		<div class="text-text-subdued text-sm md:text-sm font-light">
 			{#each key as name,i}
 				{#if i<key.length -1}
 					<span>{name} • </span>
