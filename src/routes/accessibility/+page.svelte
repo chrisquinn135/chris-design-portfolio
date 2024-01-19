@@ -87,7 +87,7 @@
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
 			</div>
-			<p class="text-text-subdued text-base sm:text-xl font-light">ACCESSIBILITY IN THE DESIGN SYSTEM</p>
+			<p class="text-text-subdued text-base sm:text-xl font-medium">ACCESSIBILITY IN THE DESIGN SYSTEM</p>
 			<h1 class="h1">
 				Redesigning Components to Incorporate Accessible Design in Trulioo
 			</h1>

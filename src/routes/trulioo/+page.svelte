@@ -35,7 +35,7 @@
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
 			</div>
-			<p class="all-small-caps text-text-subdued text-xl sm:text-2xl font-light">
+			<p class="text-text-subdued text-base sm:text-xl font-medium">
 				TRULIOO — LINK LEADS MANAGER
 			</p>
 			<h1 class="h1">Designing the link managment system to improve lead conversion</h1>
