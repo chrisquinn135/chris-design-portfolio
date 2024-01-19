@@ -94,12 +94,12 @@
 			<div class="flex flex-col gap-2">
 				<div class="bg-text-default w-full h-0.5" />
 			</div>
-			<h1 class="h1">Asset Manager — Custom Figma Plugin</h1>
-			<h2 class="text-text-subdued text-lg sm:text-2xl">
-				A Custom Tool for Consistent Assets Across the Platform
-			</h2>
+			<p class="all-small-caps text-text-subdued text-xl sm:text-2xl font-light">ASSET MANAGER — CUSTOM FIGMA PLUGIN</p>
+			<h1 class="h1">
+				Creating a Custom Tool for Consistent Assets
+			</h1>
 		</div>
-		<img src={'/asset/hero.png'} alt="hero" class="rounded-lg w-full" />
+		<img src={'/asset/heroadj.webp'} alt="hero" class="rounded-lg w-full" />
 		<SectionLayout id="brief">
 			<div class={div}>
 				<div class="flex flex-col gap-8 sm:gap-16">
@@ -110,11 +110,10 @@
 					<div>
 						<p class={label}>Skills</p>
 						<div class={body} >
+						<p>Figma plugin APIs</p>
 						<p>Product design</p>
 						<p>Design tools</p>
 						<p>Interaction design</p>
-						<p>Figma Plugin APIs</p>
-						
 						</div>
 					</div>
 				</div>
@@ -724,15 +723,26 @@
 			<div class="bg-border-subdued w-full h-px gap-2" />
 		</SectionLayout>
 		<div class="flex flex-col gap-8">
-			<h2 class="text-2xl sm:text-4xl font-bold">Next project:</h2>
-			<Card
-				title={'Trulioo Design Linter'}
-				desc={'Introducing Automation to the Design Review Process'}
-				slug="/tds-hero.avif"
-				t1={'Product Design'}
-				t2={'Design Tooling'}
-				url={'/tds'}
+			<h2 class="text-2xl sm:text-4xl font-bold">Next projects:</h2>
+			
+			<div class="flex flex-col sm:flex-row gap-16 sm:gap-0">
+				<Card
+				title={'ACCESSIBILITY IN THE DESIGN SYSTEM'}
+				desc={'Redesigning Components to Incorporate Accessible Design'}
+				slug="/accsq.png"
+				url={'/accessibility'}
+				key={['Design systems','Accessibility']}
+	
 			/>
+			<Card
+			title={'TRULIOO — LINK LEADS MANAGER'}
+			desc={'Designing the link managment system to improve lead conversion'}
+			slug="/herolead.png"
+			url={'/trulioo'}
+			key={['Product design','Platform capabilities']}
+
+		/>
+			</div>
 		</div>
 		<Footer />
 	</section>
