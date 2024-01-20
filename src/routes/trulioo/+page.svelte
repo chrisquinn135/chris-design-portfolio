@@ -38,7 +38,7 @@
 			<p class="text-text-subdued text-base sm:text-xl font-medium">
 				TRULIOO — LINK LEADS MANAGER
 			</p>
-			<h1 class="h1">Designing the link managment system to improve lead conversion</h1>
+			<h1 class="h1">Designing the Link Managment System to Improve Lead Conversion</h1>
 		</div>
 
 		<img src="/lead/hero.png" alt="modal design rational" />
