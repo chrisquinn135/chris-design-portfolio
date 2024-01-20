@@ -96,7 +96,7 @@
 			</div>
 			<p class="text-text-subdued text-base sm:text-xl font-medium">ASSET MANAGER — CUSTOM FIGMA PLUGIN</p>
 			<h1 class="h1">
-				Creating a Custom Tool for Consistent Assets
+				Creating a Custom Tool for Consistent Assets Across the Platform
 			</h1>
 		</div>
 		<img src={'/asset/heroadj.webp'} alt="hero" class="rounded-lg w-full" />

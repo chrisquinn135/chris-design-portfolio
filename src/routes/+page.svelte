@@ -132,7 +132,7 @@
 			<div id="tds">
 				<Card
 					title={'TRULIOO — LINK LEADS MANAGER'}
-					desc={'Designing the link managment system to improve lead conversion'}
+					desc={'Designing the Link Managment System to Improve Lead Conversion'}
 					slug="/herolead.png"
 					url={'/trulioo'}
 					key={['Product design','Platform capabilities']}
