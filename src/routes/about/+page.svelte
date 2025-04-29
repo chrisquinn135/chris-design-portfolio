@@ -64,7 +64,7 @@
 				<div class="flex flex-col gap-16">
 					<div class={body}>
 						<div class="flex flex-col gap-4">
-							<h3 class={h3}>I’m Chris, a product designer based in San Diego!</h3>
+							<h3 class={h3}>I’m Chris, a product designer based in New York!</h3>
 							<span>
 								I bring a unique lens to product design through combining my development background
 								and technical know-how with strong design skills and sensibilities. I pride myself
@@ -86,7 +86,11 @@
 								<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
 									<img src={'/github.png'} alt="logo" class="w-8" />
 								</a>
-								<a href="./christopher-su-resume.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
+								<a
+									href="./christopher-su-resume-2025.pdf"
+									target="_blank"
+									class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]"
+								>
 									<span class="text-sm font-bold text-text-default">Resume</span>
 								</a>
 							</span>
@@ -108,7 +112,7 @@
 				<img src={'/chris.webp'} alt="hero" class="rounded-lg" />
 				<div class={body}>
 					<div class="flex flex-col gap-4">
-						<h3 class={h3}>I’m Chris, a product designer based in San Diego!</h3>
+						<h3 class={h3}>I’m Chris, a product designer based in New York!</h3>
 						<span>
 							I bring a unique lens to product design through combining my development background
 							and technical know-how with strong design skills and sensibilities. I pride myself in
@@ -130,7 +134,7 @@
 							<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
 								<img src={'/github.png'} alt="logo" class="w-8" />
 							</a>
-							<a href="./christopher-su-resume.pdf" target="_blank" class="hover">
+							<a href="./christopher-su-resume-2025.pdf" target="_blank" class="hover">
 								<span class="text-sm underline">Resume</span>
 							</a>
 						</span>
@@ -151,42 +155,54 @@
 			</div>
 		</div>
 		<div class="bg-border-subdued w-full h-px gap-2" />
-		<div class="flex flex-col gap-16" id='experience'>
+		<div class="flex flex-col gap-16" id="experience">
 			<div>
 				<h2 class={h1}>Experience</h2>
 			</div>
 			<div class={div}>
+				<span class={h3}>State Farm </span>
+				<div class={body}>
+					<p class={label}>Product Designer, Design Systems — 2024 to Present</p>
+					I led the design and development of core components for the State Farm Design System, ensuring
+					a future-proof, scalable approach to replace the legacy system with long-term consistency.
+					I spearheaded the implementation of design tokens, defining token structure and naming conventions
+					while driving cross-functional adoption through education initiatives. Additionally, I facilitated
+					collaboration sessions with product teams, owned an in-house design system plugin, and led
+					user research studies, resulting in improved designer satisfaction and more efficient workflows.
+				</div>
+			</div>
+			<div class={div}>
 				<span class={h3}>Trulioo </span>
 				<div class={body}>
-					<p class={label}>Associate UX/UI Designer — 2022 to Present</p>
-					Designed, delivered and launched multiple features for a global B2B SaaS identity
-					solutions platform, acquiring a significant number of clients within the first year of
-					launch. Responsibilities include ideation, wireframing, prototyping, and visual design to
-					create experiences at the global and enterprise level.
+					<p class={label}>Associate UX/UI Designer — 2022 to 2024</p>
+					Designed, delivered and launched multiple features for a global B2B SaaS identity solutions
+					platform, acquiring a significant number of clients within the first year of launch. Responsibilities
+					include ideation, wireframing, prototyping, and visual design to create experiences at the
+					global and enterprise level.
 				</div>
 			</div>
 			<div class={div}>
 				<span class={h3}>Trulioo </span>
 				<div class={body}>
 					<p class={label}>Product Visual Designer Intern — 2022</p>
-					Provided support for the Visual design team and contributed to feature releases for a B2B SaaS identity
-					solutions platform. 
+					Provided support for the Visual design team and contributed to feature releases for a B2B SaaS
+					identity solutions platform.
 				</div>
 			</div>
 			<div class={div}>
 				<span class={h3}>VentOUT</span>
 				<div class={body}>
 					<p class={label}>UX Designer — 2022</p>
-					Designed an online chat web application from conception to high-fidelity
-					prototypes over a two day timespan for SFHacks 2022, SFSU’s hackathon with over 200
-					participants.
+					Designed an online chat web application from conception to high-fidelity prototypes over a
+					two day timespan for SFHacks 2022, SFSU’s hackathon with over 200 participants.
 				</div>
 			</div>
 			<div class={div}>
-				<span class={h3}>Ditto </span>
+				<span class={h3}>Ditto</span>
 				<div class={body}>
 					<p class={label}>UX Designer and iOS Developer — 2021</p>
-					Designed and developed a mobile app that allows users to share photos based on location; Developed a proof-of-concept app using Swift UI to generate over 20 user interests.
+					Designed and developed a mobile app that allows users to share photos based on location; Developed
+					a proof-of-concept app using Swift UI to generate over 20 user interests.
 				</div>
 			</div>
 		</div>

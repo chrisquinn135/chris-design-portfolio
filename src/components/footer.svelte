@@ -13,13 +13,13 @@
             <a href="https://github.com/chrisquinn135" target="_blank" class="hover">
 				<img src={'/github.png'} alt="logo" class="w-8" />
 			</a>
-            <a href="./christopher-su-resume.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
+            <a href="./christopher-su-resume-2025.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
 				<span class="text-sm font-bold text-text-default">Resume</span>
 			</a>
 		</span>
 	</div>
 	<div class="flex flex-col gap-2 text-xs text-text-subdued">
-		<p>© 2023 Christopher Su</p>
+		<p>© 2025 Christopher Su</p>
 		<p>Designed and developed by Christopher Su</p>
 	</div>
 </div>
