@@ -236,7 +236,7 @@
 					</div>
 				</div>
 			</ContainerLayout>
-			<ContainerLayout>
+			<!-- <ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Mapping out priorities</h3>
 					<div class="flex flex-col gap-4">
@@ -258,7 +258,7 @@
 						class="rounded-lg w-full px-8"
 					/>
 				</div>
-			</ContainerLayout>
+			</ContainerLayout> -->
 			<ContainerLayout>
 				<div class={div}>
 					<h3 class={h3}>Creating a game plan</h3>

@@ -105,10 +105,19 @@
 			>
 			<button
 				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-				on:click={() => handle('/assetmanager')}>Asset Manager — Custom Figma Plugin
-
-				</button
-			>
+				on:click={() => handle('/designToken')}
+				>Design Tokens at State Farm
+			</button>
+			<button
+				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				on:click={() => handle('/sfds')}
+				>State Farm Design System Plugin
+			</button>
+			<button
+				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
+				on:click={() => handle('/assetmanager')}
+				>Asset Manager — Custom Figma Plugin
+			</button>
 
 			<button
 				on:click={() => handle('/accessibility')}
