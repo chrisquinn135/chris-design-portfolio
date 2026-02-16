@@ -98,8 +98,8 @@
 	>
 		<div
 			class={isActive
-				? 'block flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'
-				: ' hidden flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'}
+				? 'block flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-top sm:justify-center h-full items-start'
+				: ' hidden flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-top sm:justify-center h-full items-start'}
 			data-sveltekit-preload-data="hover"
 		>
 			<button
@@ -133,9 +133,9 @@
 				>Trulioo — Link Leads Manager</button
 			> -->
 		</div>
-		<p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
+		<!-- <p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
 			Designed and developed by Christopher Su
-		</p>
+		</p> -->
 	</nav>
 {/if}
 <slot />
