@@ -48,18 +48,6 @@
 						>.
 					</p>
 				</div>
-				<!-- <span class="flex flex-row gap-6">
-				<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
-					<img src={'/linkedin.svg'} alt="logo" class="w-8 rounded" />
-				</a>
-				<a href="https://github.com/chrisquinn135" target="_blank" class="hover">
-					<img src={'/github.png'} alt="logo" class="w-8" />
-				</a>
-				<a href="./christopher-su-resume-2025.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
-					<span class="text-sm font-bold text-text-default">Resume</span>
-				</a>
-			</span>
-				<p class="flex flex-col gap-2 text-sm text-text-subdued">Designed and developed by Christopher Su</p> -->
 			</div>
 			<div class="flex flex-col gap-y-2 pt-8">
 				<div class="bg-text-default w-full h-0.5" />
