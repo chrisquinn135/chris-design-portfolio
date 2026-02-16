@@ -106,7 +106,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n    <head>\n        <meta charset="utf-8"/>\n        <link rel="icon" href="' + assets2 + '/favicon.png"/>\n        \n\n        <meta name="viewport" content="width=device-width, initial-scale=1"/>\n        <link href="/src/prism-theme.css" rel="stylesheet"/>\n        <link rel="preconnect" href="https://fonts.googleapis.com">\n        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter+Tight:wght@300;400;500;700&family=Inter:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">\n\n        \n        ' + head + `
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n    <head>\n        <meta charset="utf-8"/>\n        <link rel="icon" href="' + assets2 + '/favicon.png"/>\n        \n\n        <meta name="viewport" content="width=device-width, initial-scale=1"/>\n        <link href="/prism-theme.css" rel="stylesheet"/>\n        <link rel="preconnect" href="https://fonts.googleapis.com">\n        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter+Tight:wght@300;400;500;700&family=Inter:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">\n\n        \n        ' + head + `
     </head>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2J0RHDRF33"><\/script>
@@ -118,7 +118,7 @@ window.dataLayer = window.dataLayer || [];
   gtag('config', 'G-2J0RHDRF33');
 <\/script>
     <body data-sveltekit-preload-data="hover">
-        <script src="/src/prism.js"><\/script>
+        <script src="/prism.js"><\/script>
         <div style="display: contents">` + body + "</div>\n    </body>\n</html>\n",
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
@@ -181,7 +181,7 @@ window.dataLayer = window.dataLayer || [];
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "gwj9tn"
+  version_hash: "4h7nmn"
 };
 function get_hooks() {
   return {};
