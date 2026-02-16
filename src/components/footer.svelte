@@ -19,7 +19,7 @@
 		</span>
 	</div>
 	<div class="flex flex-col gap-2 text-xs text-text-subdued">
-		<p>© 2025 Christopher Su</p>
+		<p>© 2026 Christopher Su</p>
 		<p>Designed and developed by Christopher Su</p>
 	</div>
 </div>
