@@ -9,7 +9,7 @@ body {
     background-size: 128px 256px;
     height: 100vh;
     // padding: $xl;
-    font-family: 'Inter Tight', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 h1,
@@ -22,15 +22,36 @@ h4 {
 .h1 {
     color: #121212;
     font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 125%;
     @include mobile {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
+        font-size: 2.5rem;
     }
 }
 
+.h2 {
+    color: #121212;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 125%;
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+
+// let h3 = 'text-text-default text-2xl font-bold sm:text-3xl';
+
 .h3 {
+    color: #121212;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 125%;
+    @include mobile {
+        font-size: 1.5rem;
+    }
+}
+
+.numericLabel {
     color: #121212;
     font-weight: 700;
     font-size: 1.5rem; /* 24px */
