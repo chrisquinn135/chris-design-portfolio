@@ -1,0 +1,121 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/about",
+			"dest": "/about/"
+		},
+		{
+			"src": "/about/",
+			"status": 308,
+			"headers": {
+				"Location": "/about"
+			}
+		},
+		{
+			"src": "/accessibility",
+			"dest": "/accessibility/"
+		},
+		{
+			"src": "/accessibility/",
+			"status": 308,
+			"headers": {
+				"Location": "/accessibility"
+			}
+		},
+		{
+			"src": "/assetmanager",
+			"dest": "/assetmanager/"
+		},
+		{
+			"src": "/assetmanager/",
+			"status": 308,
+			"headers": {
+				"Location": "/assetmanager"
+			}
+		},
+		{
+			"src": "/designToken",
+			"dest": "/designToken/"
+		},
+		{
+			"src": "/designToken/",
+			"status": 308,
+			"headers": {
+				"Location": "/designToken"
+			}
+		},
+		{
+			"src": "/sfds",
+			"dest": "/sfds/"
+		},
+		{
+			"src": "/sfds/",
+			"status": 308,
+			"headers": {
+				"Location": "/sfds"
+			}
+		},
+		{
+			"src": "/tds",
+			"dest": "/tds/"
+		},
+		{
+			"src": "/tds/",
+			"status": 308,
+			"headers": {
+				"Location": "/tds"
+			}
+		},
+		{
+			"src": "/trulioo",
+			"dest": "/trulioo/"
+		},
+		{
+			"src": "/trulioo/",
+			"status": 308,
+			"headers": {
+				"Location": "/trulioo"
+			}
+		},
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/.*",
+			"dest": "/fn"
+		}
+	],
+	"overrides": {
+		"index.html": {
+			"path": ""
+		},
+		"about.html": {
+			"path": "about"
+		},
+		"accessibility.html": {
+			"path": "accessibility"
+		},
+		"assetmanager.html": {
+			"path": "assetmanager"
+		},
+		"designToken.html": {
+			"path": "designToken"
+		},
+		"sfds.html": {
+			"path": "sfds"
+		},
+		"tds.html": {
+			"path": "tds"
+		},
+		"trulioo.html": {
+			"path": "trulioo"
+		}
+	}
+}

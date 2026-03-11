@@ -9,6 +9,8 @@
 	import InverseMenu from '../components/inverseMenu.svelte';
 	import Curtain from '../components/curtain.svelte';
 	import ScrollTop from '../components/scrollTop.svelte';
+	// Password gate disabled – no password required
+	// import PasswordGate from '../components/PasswordGate.svelte';
 	import { loading, destination } from '../store';
 
 	import { page } from '$app/stores';
@@ -39,6 +41,8 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
+
+<!-- <PasswordGate /> -->
 
 {#if $loading}
 	<Curtain />
@@ -95,8 +99,8 @@
 	>
 		<div
 			class={isActive
-				? 'block flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'
-				: ' hidden flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-center h-full items-start'}
+				? 'block flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-top sm:justify-center h-full items-start'
+				: ' hidden flex flex-col gap-8 text-text-disabled text-4xl font-bold justify-top sm:justify-center h-full items-start'}
 			data-sveltekit-preload-data="hover"
 		>
 			<button
@@ -105,13 +109,13 @@
 			>
 			<button
 				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-				on:click={() => handle('/designToken')}
-				>Design Tokens at State Farm
+				on:click={() => handle('/sfds')}
+				>Modernizing the State Farm Design System
 			</button>
 			<button
 				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
-				on:click={() => handle('/sfds')}
-				>State Farm Design System Plugin
+				on:click={() => handle('/designToken')}
+				>Design Tokens at State Farm
 			</button>
 			<button
 				class="text-left cursor-pointer sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
@@ -124,15 +128,15 @@
 				class="text-left sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 				>Accessibility in the Design System</button
 			>
-			<button
+			<!-- <button
 				on:click={() => handle('/trulioo')}
 				class="text-left sm:hover:translate-x-8 duration-300 ease-in-out hover:text-text-inverse-default"
 				>Trulioo — Link Leads Manager</button
-			>
+			> -->
 		</div>
-		<p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
+		<!-- <p class="top-0 text-xl sm:top-auto sm:bottom-0 position absolute py-16 text-text-disabled">
 			Designed and developed by Christopher Su
-		</p>
+		</p> -->
 	</nav>
 {/if}
 <slot />

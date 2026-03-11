@@ -19,7 +19,7 @@ export default {
             'icon-green': '#2B8528',
             'icon-red': '#bb363c',
             'icon-yellow': '#a4580e',
-            'surface-+1': '#F2F2F2',
+            'surface-+1': '#F3F6F9',
             'surface-+2': '#E5E5E5',
             'surface-+3': '#BFBFBF',
             'surface-0': '#FFFFFF',
@@ -30,6 +30,7 @@ export default {
             'text-inverse-subdued': '#E5E5E5',
             'text-placeholder': '#666666',
             'text-subdued': '#666666',
+            'text-highlight': '#013586'
           },        
         extend: {}
     },

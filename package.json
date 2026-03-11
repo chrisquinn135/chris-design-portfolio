@@ -2,6 +2,9 @@
 	"name": "chris-design-portfolio",
 	"version": "0.0.1",
 	"private": true,
+	"engines": {
+		"node": "20.x"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -11,6 +14,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-vercel": "^3.1.0",
 		"@sveltejs/kit": "^1.20.4",
 		"autoprefixer": "^10.4.16",
 		"postcss": "^8.4.31",
