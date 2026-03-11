@@ -9,7 +9,8 @@
 	import InverseMenu from '../components/inverseMenu.svelte';
 	import Curtain from '../components/curtain.svelte';
 	import ScrollTop from '../components/scrollTop.svelte';
-	import PasswordGate from '../components/PasswordGate.svelte';
+	// Password gate disabled – no password required
+	// import PasswordGate from '../components/PasswordGate.svelte';
 	import { loading, destination } from '../store';
 
 	import { page } from '$app/stores';
@@ -41,7 +42,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<PasswordGate />
+<!-- <PasswordGate /> -->
 
 {#if $loading}
 	<Curtain />

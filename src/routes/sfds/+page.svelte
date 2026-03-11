@@ -103,7 +103,6 @@
 						<p class={body}>
 							With more than a century of history, State Farm has evolved through many visual eras.
 							Its previous design system, in place for eight years, had become constrained by legacy technology, accessibility gaps, and inconsistent user experiences.
-							technology, accessibility gaps, and inconsistent user experiences.
 							<br /><br />
 							I joined in 2024 at a pivotal moment, as the organization began reimagining its design
 							system for the future.

@@ -13,7 +13,7 @@
             <a href="https://github.com/chrisquinn135" target="_blank" class="hover">
 				<img src={'/github.png'} alt="logo" class="w-8" />
 			</a>
-            <a href="./christopher-su-resume-2025.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
+            <a href="./christopher-su-resume-2026-mar.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)]">
 				<span class="text-sm font-bold text-text-default">Resume</span>
 			</a>
 		</span>

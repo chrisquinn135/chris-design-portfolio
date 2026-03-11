@@ -21,28 +21,30 @@
 		};
 	}
 
-	let unlocked = false;
+	// Password gate disabled – portfolio is always unlocked
+	let unlocked = true;
+	// let unlocked = false;
 	let lifting = false;
 	let password = '';
 	let error = '';
 
-	onMount(() => {
-		if (browser) {
-			unlocked = sessionStorage.getItem('portfolio-unlocked') === 'true';
-		}
-	});
+	// onMount(() => {
+	// 	if (browser) {
+	// 		unlocked = sessionStorage.getItem('portfolio-unlocked') === 'true';
+	// 	}
+	// });
 
-	function handleSubmit(e) {
-		e?.preventDefault();
-		error = '';
-		if (password.trim() === PORTFOLIO_PASSWORD) {
-			lifting = true;
-			if (browser) sessionStorage.setItem('portfolio-unlocked', 'true');
-			unlocked = true;
-		} else {
-			error = 'Incorrect password';
-		}
-	}
+	// function handleSubmit(e) {
+	// 	e?.preventDefault();
+	// 	error = '';
+	// 	if (password.trim() === PORTFOLIO_PASSWORD) {
+	// 		lifting = true;
+	// 		if (browser) sessionStorage.setItem('portfolio-unlocked', 'true');
+	// 		unlocked = true;
+	// 	} else {
+	// 		error = 'Incorrect password';
+	// 	}
+	// }
 </script>
 
 {#if !unlocked}
@@ -56,7 +58,7 @@
 			<img src="/inverse.png" alt="logo" class="h-full" />
 		</div>
 		<div class="gate-form-wrap">
-			<form on:submit={handleSubmit} class="gate-form items-center gap-4">
+			<form on:submit={(e) => e?.preventDefault()} class="gate-form items-center gap-4">
 				<label for="portfolio-password" class="gate-label font-bold">Portfolio password</label>
 				<input
 					id="portfolio-password"
