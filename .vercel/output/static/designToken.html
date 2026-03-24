@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="./favicon.png"/>
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="/prism-theme.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter+Tight:wght@300;400;500;700&family=Inter:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+        
+        
+		<link href="./_app/immutable/assets/0.c6d2eb40.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/card.2894b3d7.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/footer.0d58ed7b.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/pageLayout.06f1c003.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.651b1fab.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.282fc400.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.96ce6a00.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.6988463a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.f4a076f2.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.141d459a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/globals.7f7f1b26.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/store.a6a77e9a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.e36700f7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.1f77299f.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/6.8b9196e3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/card.446f6b12.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/footer.b0149731.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/sectionLayout.ccb3a915.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/containerLayout.2fced090.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/pageLayout.910ac691.js"><title>Christopher Su — Design tokens</title><!-- HEAD_svelte-l8ky87_START --><!-- HEAD_svelte-l8ky87_END -->
+    </head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2J0RHDRF33"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2J0RHDRF33');
+</script>
+    <body data-sveltekit-preload-data="hover">
+        <script src="/prism.js"></script>
+        <div style="display: contents">       <div class="fixed sm:hidden bottom-0 flex bg-surface-inverse w-full flex flex-row justify-between px-6 py-4 z-50"><button class="h-11" tabindex="0" data-sveltekit-preload-data="hover"> <img id="menu" src="/inverse.png" alt="swap" class="h-full cursor-pointer"></button> <div class="flex flex-row gap-4"><div class="bg-surface-0 w-0.5 h-full text-text-inverse"></div> <button tabindex="0" class="h-11"> <img id="menu" src="/menu-inverse.png" alt="Image Swap" class="h-11 cursor-pointer"></button></div></div>  <div class="hidden sm:block"><button class="h-11 top-0 left-0 fixed ml-6 sm:ml-8 lg:ml-16 mt-6 sm:mt-8 z-50" tabindex="0" data-sveltekit-preload-data="hover"> <img id="menu" src="/chris-logo.png" alt="swap" class="h-full cursor-pointer"></button> <button tabindex="0" class="h-11 top-0 right-0 fixed mr-6 sm:mr-8 lg:mr-16 mt-6 sm:mt-8 z-50"> <img id="menu" src="/menu-icon.png" alt="Image Swap" class="h-11 cursor-pointer "></button></div>    <div class="px-6 pb-20 sm:pb-0 sm:px-8 lg:px-16 grid svelte-1pp9hcc"><div class="hidden sm:block"><nav class="flex flex-col gap-4 pt-6 pb-6 sm:pt-8 sm:pb-16 sticky top-0 justify-end h-screen"><p class="text-text-default font-bold text-base" data-svelte-h="svelte-1cb510">CONTENTS</p> <ul class="flex flex-col gap-4 text-text-placeholder"><li data-svelte-h="svelte-aohq2t"><a href="#overview" class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default">Background</a></li> <li data-svelte-h="svelte-191imqi"><a href="#asset" class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default">Approach</a></li> <li data-svelte-h="svelte-g217c6"><a href="#ideation" class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default">Design decisions</a></li> <li data-svelte-h="svelte-n9alx3"><a href="#design" class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default">Validation</a></li> <li data-svelte-h="svelte-17mh10p"><a href="#dev" class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default">Implementation</a></li> <li data-svelte-h="svelte-4pep1v"><a href="#launch" class="block hover:translate-x-4 duration-300 ease-in-out hover:text-text-default">Impact</a></li>  </ul></nav></div> <div class="justify-items-center"><section id="top" class="max-w-4xl flex flex-col gap-16 pt-6 pb-6 md:pt-8 md:pb-16"><div class="flex flex-col gap-4" data-svelte-h="svelte-m938kc"><div class="flex flex-col gap-2"><div class="bg-text-default w-full h-0.5"></div></div> <p class="text-text-subdued text-lg sm:text-xl font-medium">DESIGN TOKENS</p> <h1 class="h1">Implementing design tokens at State Farm</h1></div> <img src="/token/token-hero.png" alt="hero" class="w-full"> <section class="flex flex-col gap-8 sm:gap-16" id="brief"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8"><div class="flex flex-col gap-4 col-span-12 sm:col-span-6"><p class="h3" data-svelte-h="svelte-1ek4z7j">Overview</p> <p class="text-text-subdued text-lg font-light">I led a multi-team effort to <span class="text-text-default font-bold" data-svelte-h="svelte-648ar4">create and implement design tokens</span>
+							throughout the State Farm Design System.
+							<br><br>
+							The project aimed to provide a scalable and systematic solution to future-proof the design
+							decisions and visual styles used at State Farm.</p></div> <div class="flex flex-col gap-4 col-span-12 sm:col-span-6"><p class="h3" data-svelte-h="svelte-1e4wsce">Impact</p> <p class="text-text-subdued text-lg font-light">Since the release, design tokens have been adopted by both design and engineering
+							teams, allowing for <span class="text-text-default font-bold" data-svelte-h="svelte-1r6rrcu">increased consistency and efficiency</span>
+							in the organization.
+							<br><br>
+							I am currently working on expanding design token education and exploring the introduction
+							of multi-brand theming.</p></div></div> <div class="bg-border-subdued w-full h-px"></div></section>  <section class="flex flex-col gap-8 sm:gap-16" id="overview"><div data-svelte-h="svelte-127npbc"><h2 class="h2"><span class="numericLabel">01</span><br>Background</h2></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="flex flex-col gap-4"><h3 class="h3" data-svelte-h="svelte-1o09gic">Issues with <span>visual alignment</span></h3> <div class="text-text-subdued text-lg font-light">Visual style alignment has always been an issue at State Farm, both between and
+								within product teams. While the previous design system had stylesheets, choosing
+								styles was not intuitive and often led to inconsistencies across teams.</div></div> <img src="/token/dt-1-1.png" alt="visual alignment issues" class="w-full"></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="flex flex-col gap-4 sm:col-span-7 col-span-12"><h3 class="h3" data-svelte-h="svelte-1558ewh">Issues with digital alignment</h3> <p class="text-text-subdued text-lg font-light">There was no standardized approach to styling. Design and engineering frequently
+								relied on hardcoded values, leading to digital misalignment and inconsistent UI
+								patterns across products.
+								<br><br>
+								As a result, foundational changes required manual updates and could take months, if not
+								years, to update.</p></div> <div class="text-text-subdued text-lg font-light sm:col-span-5 col-span-12"><img src="/token/dt-1-2.png" alt="digital alignment issues" class="w-full"></div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-2 bg-surface-+1 p-4 sm:p-8 justify-center items-center text-center" data-svelte-h="svelte-q94dm3"><p class="text-lg font-bold text-text-subdued">SYSTEM CHALLENGE</p> <p class="h3">State Farm needed a scalable approach that enabled <span class="text-[#015886]">intuitive style selection</span>
+							while aligning design and engineering around a
+							<span class="text-[#51733A]">shared source of truth</span></p></div></div> <div class="bg-border-subdued w-full h-px"></div></section>  <section class="flex flex-col gap-8 sm:gap-16" id="asset"><h2 class="h2" data-svelte-h="svelte-13f2l4k"><span class="numericLabel">02</span><br>Deciding on an approach</h2> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="flex flex-col gap-4 sm:col-span-7 col-span-12"><h3 class="h3" data-svelte-h="svelte-1v1cswf">Landing on <span>design tokens</span></h3> <p class="text-text-subdued text-lg font-light">After conducting research, attending workshops, and speaking with industry experts,
+								it became clear that design tokens could effectively address our issues.</p></div> <div class="flex flex-row gap-4 bg-[#E8EEF3] px-3 py-2 sm:px-6 sm:py-3 items-center" data-svelte-h="svelte-fad0aq"><img src="/token/info.png" alt="info-icon" class="w-[32px]"> <p class="text-lg text-text-subdued">Design tokens are sets of <span class="text-[#015886] font-bold">design-related decisions</span> stored in name-value pairs, representing various design elements such as colors, font
+								sizes, or spacing units.</p></div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="flex flex-col gap-4"><h3 class="h3" data-svelte-h="svelte-lcbqze">Why <span>design tokens?</span></h3> <div class="text-text-subdued text-lg font-light">Design tokens target both issues, semantic naming structures inform the user when to
+								use a token, and platform agnostically allows engineering and design to share the
+								same language.</div></div> <img src="/token/dt-2-2.png" alt="visual alignment issues" class="w-full"></div></div> <div class="bg-border-subdued w-full h-px gap-2"></div></section>  <section class="flex flex-col gap-8 sm:gap-16" id="ideation"><h2 class="h2" data-svelte-h="svelte-1mpk4bl"><span class="numericLabel">03</span><br>Systemizing the design decisions</h2> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="text-text-subdued text-lg font-light">I wanted to avoid over-engineering our design tokens, especially since the concept was
+							new to State Farm.</div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="flex flex-col gap-4 sm:col-span-7 col-span-12"><h3 class="h3" data-svelte-h="svelte-1kw0o9l"><span>Two-layer</span> token structure</h3> <p class="text-text-subdued text-lg font-light">I determined that a two-layer token structure would be sufficient to ensure clarity
+								while still enabling us to provide semantic naming for our users.
+								<br><br>
+								Although a three-layer token system could facilitate component tokens and support a multi-brand
+								experience, the potential advantages could complicate the system beyond what most teams
+								would require.</p></div> <div class="sm:col-span-5 col-span-12" data-svelte-h="svelte-etbsnw"><img src="/token/dt-3-1.png" alt="digital alignment issues" class="justify-self-center md:w-3/4"></div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="flex flex-col gap-4"><h3 class="h3" data-svelte-h="svelte-xdsp26"><span>Three-part</span> naming convention</h3> <div class="text-text-subdued text-lg font-light">I focused on creating a naming structure that was easy to understand and scalable
+								enough to accommodate future token additions or changes. Each name should clearly
+								describe where and when to use each token.
+								<br><br>
+								To achieve this, I developed a three-part naming structure consisting of property, role,
+								and modifiers.</div></div> <img src="/token/dt-3-2.png" alt="three-part naming convention" class="w-full"></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="text-text-subdued text-lg font-light">With the design token structure in place, I was able to effectively tokenize the
+							design decisions within the system.</div> <div class="p-2 sm:p-6 bg-surface-+1 flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light"><img src="/token/dt-3-3.png" alt="three-part naming convention" class="w-full"></div></div></div> <div class="bg-border-subdued w-full h-px gap-2"></div></section>  <section class="flex flex-col gap-8 sm:gap-16" id="design"><div data-svelte-h="svelte-addugi"><h2 class="h2"><span class="numericLabel">04</span><br>Validating the structure</h2></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="text-text-subdued text-lg font-light">Once the initial token set was complete, I conducted user research with the practice
+							in order to ensure that the design tokens would meet the needs and requirements of the
+							product teams within the organization</div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="flex flex-col gap-4 sm:col-span-7 col-span-12"><h3 class="h3" data-svelte-h="svelte-h6wb4b">Simplifying <span>token categories</span></h3> <p class="text-text-subdued text-lg font-light">Initially, tokens were categorized into very specific use-cases, such as separating
+								spacing into padding and gap, despite their scales being identical.
+								<br><br>
+								However, testing uncovered that users preferred simplicity during token selection rather
+								than having every case abstracted into its own category.</p></div> <div class="text-text-subdued text-lg font-light sm:col-span-5 col-span-12"><img src="/token/dt-4-1.png" alt="digital alignment issues" class="w-full"></div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="flex flex-col gap-4"><h3 class="h3" data-svelte-h="svelte-1oyopco">Building in <span>accessible design</span></h3> <div class="text-text-subdued text-lg font-light">User testing also enabled us to identify edge cases where designers might
+								inadvertently create non-accessible designs, particularly involving color contrast.
+								<br><br>
+								We were able to catch these instances and ensure that the available color tokens would
+								guarantee 100% color contrast compliance, provided they are used in the appropriate use-cases.</div></div> <div class="grid grid-cols-12 sm:gap-8 gap-2" data-svelte-h="svelte-19y5edo"><img src="/token/dt-4-2.png" alt="three-part naming convention" class="w-full col-span-6"> <img src="/token/dt-4-3.png" alt="three-part naming convention" class="w-full col-span-6"></div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="text-text-subdued text-lg font-light sm:col-span-5 col-span-12"><div class="p-2 sm:p-6 bg-surface-+1 flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light"><img src="/token/dt-4-4.png" alt="education" class="w-full"></div></div> <div class="flex flex-col gap-4 sm:col-span-7 col-span-12"><h3 class="h3" data-svelte-h="svelte-xlcovh">Building out <span>education</span></h3> <p class="text-text-subdued text-lg font-light">Because design tokens were a new concept for our designers, we received numerous
+								requests for in-depth token education.
+								<br><br>
+								I led several educational initiatives, including creating recorded Figma demos, hosting
+								office hours and share sessions, and developing tools to assist designers in selecting
+								tokens.</p></div></div></div> <div class="bg-border-subdued w-full h-px gap-2"></div></section>  <section class="flex flex-col gap-8 sm:gap-16" id="dev"><h2 class="h2" data-svelte-h="svelte-9ejvok"><span class="numericLabel">05</span><br>Implementation on the backend</h2> <div class="flex flex-col gap-4 sm:gap-8"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="flex flex-col gap-4 col-span-6"><h3 class="h3" data-svelte-h="svelte-nvkyxl"><span>Design</span> implementation</h3> <p class="text-text-subdued text-lg font-light">The Gitlab repository is synchronized with the Figma variables via a custom Figma
+								plugin.</p></div> <div class="flex flex-col gap-4 col-span-6"><h3 class="h3" data-svelte-h="svelte-re17ro"><span>Engineering</span> implementation</h3> <p class="text-text-subdued text-lg font-light">The tokens are processed and packaged using a CD/CI process that utilizes Style
+								dictionary to convert JSON to a usable format.</p></div></div> <div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="flex flex-col gap-4 col-span-6"><img src="/token/dt-5-1.png" alt="design token implementation" class="w-full"></div> <div class="flex flex-col gap-4 col-span-6"><img src="/token/dt-5-2.png" alt="design token implementation" class="w-full"></div></div></div> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="flex flex-col gap-4"><h3 class="h3" data-svelte-h="svelte-1rgrkpo">Managing a <span>single source of truth</span> across changes</h3> <div class="text-text-subdued text-lg font-light">I worked collaboratively with our engineers to develop a custom Figma plugin that
+								helps maintain GitLab as the single source of truth.
+								<br><br>
+								The plugin can detect any discrepancies between the tokens JSON file and our variable
+								set within Figma. Once a difference is identified, the user has the option to either
+								revert the change or push the update to GitLab, where it will trigger a pipeline to update
+								the tokens accordingly.</div></div> <div class="p-2 sm:p-6 bg-surface-+1 flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light"><img src="/token/dt-5-3.png" alt="token manager" class="w-full"></div></div></div> <div class="bg-border-subdued w-full h-px"></div></section>  <section class="flex flex-col gap-8 sm:gap-16" id="launch"><h2 class="h2" data-svelte-h="svelte-3uiw27"><span class="numericLabel">06</span><br>Impact</h2> <div class="flex flex-col gap-4 sm:gap-8"><div class="flex flex-col gap-8"><div class="grid sm:grid-cols-12 sm:gap-8 gap-2 gap-y-8 items-center"><div class="flex flex-col gap-4 col-span-6"><h3 class="h3" data-svelte-h="svelte-1xx34q">Improved cross-team alignment through the usage of a shared language</h3> <p class="text-text-subdued text-lg font-light">By standardizing the way tokens are defined and implemented, teams can easily
+									collaborate, ensuring that design choices are cohesive and aligned with brand
+									standards.</p></div> <div class="flex flex-col gap-4 col-span-6"><h3 class="h3" data-svelte-h="svelte-gfw5qv">Time required to change design styles reduced by 93%</h3> <p class="text-text-subdued text-lg font-light">The time it takes to change style values at State Farm has been drastically
+									reduced from several months to just a few minutes.</p></div></div> <div class="p-2 sm:p-6 bg-surface-+1 flex flex-col justify-center items-center text-center text-text-subdued gap-8 font-light"><img src="/token/dt-6-1.png" alt="token manager" class="w-full"></div></div></div> <div class="bg-border-subdued w-full h-px gap-2"></div></section> <div class="flex flex-col gap-8"><h2 class="text-2xl sm:text-4xl font-bold" data-svelte-h="svelte-1qlqdgb">Next projects:</h2> <div class="flex flex-col sm:flex-row gap-16 sm:gap-0"><button class="cursor-pointer container flex flex-col gap-4 svelte-1eiv3f8"><div class="test svelte-1eiv3f8"><div class="box svelte-1eiv3f8"></div> <img id="asset" src="/sfds.png" alt="card description" class="imagecont svelte-1eiv3f8"></div> <div class="flex flex-col gap-2 items-start text-left pr-4"><p class="all-small-caps text-text-subdued text-lg font-medium">STATE FARM DESIGN SYSTEM</p> <h3 class="text-xl sm:text-2xl font-bold svelte-1eiv3f8"><span class="text-container svelte-1eiv3f8">Modernizing the system for the next generation</span></h3> <div class="text-text-subdued text-sm md:text-sm font-light"><span>February 2024 - Present • </span><span>Design systems</span></div></div> </button> <button class="cursor-pointer container flex flex-col gap-4 svelte-1eiv3f8"><div class="test svelte-1eiv3f8"><div class="box svelte-1eiv3f8"></div> <img id="asset" src="/assetsq.png" alt="card description" class="imagecont svelte-1eiv3f8"></div> <div class="flex flex-col gap-2 items-start text-left pr-4"><p class="all-small-caps text-text-subdued text-lg font-medium">ASSET MANAGER — CUSTOM FIGMA PLUGIN</p> <h3 class="text-xl sm:text-2xl font-bold svelte-1eiv3f8"><span class="text-container svelte-1eiv3f8">Creating a custom tool for consistent assets across the platform</span></h3> <div class="text-text-subdued text-sm md:text-sm font-light"><span>August 2023 - October 2023 • </span><span>Product design • </span><span>Software development</span></div></div> </button></div></div> <div class="flex flex-col gap-8" data-svelte-h="svelte-nqgj54"><div class="bg-border-subdued w-full h-px gap-2"></div> <div class="flex flex-col gap-4"><p class="text-text-default text-lg font-bold sm:text-2xl">Get in touch below or directly at <span class="text-action-interactive-default">christophersu02@gmail.com</span>!</p> <span class="flex flex-row gap-6"><a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover svelte-1uqe0pj"><img src="/linkedin.svg" alt="logo" class="w-8 rounded"></a> <a href="https://github.com/chrisquinn135" target="_blank" class="hover svelte-1uqe0pj"><img src="/github.png" alt="logo" class="w-8"></a> <a href="./christopher-su-resume-2026-mar.pdf" target="_blank" class="hover h-8 bg-surface-0 flex items-center px-4 py-2 rounded-lg border-2 border-text-default hover:bg-surface-+3 shadow-[0_2px_0_0_rgba(0,0,0,1)] svelte-1uqe0pj"><span class="text-sm font-bold text-text-default">Resume</span></a></span></div> <div class="flex flex-col gap-2 text-xs text-text-subdued"><p>© 2026 Christopher Su</p> <p>Designed and developed by Christopher Su</p></div> </div></section></div> <div class="hidden sm:block" data-svelte-h="svelte-p7rs17"><section class="sticky top-0 flex flex-col items-end justify-end h-screen pt-6 pb-6 sm:pt-8 sm:pb-16"></section></div> </div> 
+			
+			<script>
+				{
+					__sveltekit_1wskek7 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.651b1fab.js"),
+						import("./_app/immutable/entry/app.6988463a.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    </body>
+</html>
