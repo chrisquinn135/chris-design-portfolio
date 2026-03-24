@@ -64,17 +64,11 @@
 					<div class="flex flex-col gap-16">
 						<div class={body}>
 							<div class="flex flex-col gap-4">
-								<h3 class="h3">I’m Chris, a product designer based in New York!</h3>
+								<h3 class="h3">I’m Chris, a senior product designer based in Los Angeles!</h3>
 								<span>
-									I bring a unique lens to product design through combining my development
-									background and technical know-how with strong design skills and sensibilities. I
-									pride myself in bridging the gap between designer and developer, ensuring that the
-									perfect experience gets delivered to the users!
-									<br /><br />
-									I’ve had the opportunity to work on a variety of projects across different disciplines,
-									including B2B platforms, internal tools, and identity technologies. I am currently
-									interested in opportunities that will allow me to leverage my unique position as a
-									designer who can talk code and elevate the standard for technical and visual implementations.
+									I’m a product designer specializing in design systems, with a background in software engineering that shapes how I approach building at scale. I’ve worked across both enterprise and early-stage environments, designing systems that balance flexibility with structure to support teams of different sizes and levels of maturity. 
+									<br/><br/>
+									My work focuses on creating robust, extensible systems that empower both designers and developers, bridging the gap between design intent and technical implementation. I bring a systems-driven mindset to everything I do, from defining foundational patterns to shipping production-ready components. By combining strong product thinking with hands-on technical knowledge, I aim to create design systems that are not only consistent and accessible, but deeply integrated into how teams build and ship.
 									<br /><br />
 									Feel free to reach out and start a conversation either at christophersu02@gmail.com
 									or any of my socials below!
@@ -116,20 +110,13 @@
 					<img src={'/chris.webp'} alt="hero" class="rounded-lg" />
 					<div class={body}>
 						<div class="flex flex-col gap-4">
-							<h3 class="h3">I’m Chris, a product designer based in New York!</h3>
+							<h3 class="h3">I’m Chris, a senior product designer based in Los Angeles!</h3>
 							<span>
-								I bring a unique lens to product design through combining my development background
-								and technical know-how with strong design skills and sensibilities. I pride myself
-								in bridging the gap between designer and developer, ensuring that the perfect
-								experience gets delivered to the users!
+								I’m a product designer specializing in design systems, with a background in software engineering that shapes how I approach building at scale. I’ve worked across both enterprise and early-stage environments, designing systems that balance flexibility with structure to support teams of different sizes and levels of maturity. 
+								<br/><br/>
+								My work focuses on creating robust, extensible systems that empower both designers and developers, bridging the gap between design intent and technical implementation. I bring a systems-driven mindset to everything I do, from defining foundational patterns to shipping production-ready components. By combining strong product thinking with hands-on technical knowledge, I aim to create design systems that are not only consistent and accessible, but deeply integrated into how teams build and ship.
 								<br /><br />
-								I’ve had the opportunity to work on a variety of projects across different disciplines,
-								including B2B platforms, internal tools, and identity technologies. I am currently interested
-								in opportunities that will allow me to leverage my unique position as a designer who
-								can talk code and elevate the standard for technical and visual implementations.
-								<br /><br />
-								Feel free to reach out and start a conversation either at christophersu02@gmail.com or
-								any of my socials below!
+								Feel free to reach out and start a conversation either at christophersu02@gmail.com or any of my socials below!
 							</span>
 							<span class="flex flex-row gap-6">
 								<a href="https://www.linkedin.com/in/chrisquinn135/" target="_blank" class="hover">
