@@ -35,11 +35,12 @@
 				>
 					<h1 class="text-3xl sm:text-4xl font-bold text-text-default !leading-normal">
 						Hi, I'm Christopher <span class="font-normal"
-							>— a senior product designer focused on building and scaling design systems. With a background in engineering, I create systems that bridge design and development and enable teams to ship at scale.
+							>— a senior product designer specializing in design systems. My engineering background shapes how I design, building token and component architecture, contribution governance, and AI workflows that help product teams ship consistently at scale.
+
 						</span>
 					</h1>
 					<p class="text-text-subdued text-base md:text-lg font-light">
-						Currently working on design systems and design tooling at
+						Currently leading design systems and internal tooling at
 						<a
 							class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover"
 							href="https://www.statefarm.com/"
