@@ -41,7 +41,7 @@
 					</h1>
 					<p class="text-text-subdued text-base md:text-lg font-light">
 						Currently leading design systems and internal tooling at
-						<a
+						<a 
 							class="text-action-interactive-default underline text-blue-50 hover:text-action-interactive-hover"
 							href="https://www.statefarm.com/"
 							target="_blank">State Farm</a
